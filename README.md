@@ -3,7 +3,10 @@
 John: Artist, Audio(?)\
 Anthony: Artist\
 Will: Programmer\
-Liam:
+Liam:\
+Max:
 ## Story/Core:
+
 ## Features: 
+Metroidvania, double jump, dash, slash attack, dash jump, lesser enemies, final boss, 
 ## Timeline:
