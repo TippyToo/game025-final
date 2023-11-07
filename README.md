@@ -3,7 +3,7 @@
 John: Artist, Audio(?)\
 Anthony: Artist\
 Will: Programmer\
-Liam:\
+Liam:
 ## Story/Core:
 ## Features: 
 ## Timeline:
