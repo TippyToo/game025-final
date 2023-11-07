@@ -1,6 +1,6 @@
 # Game Design Doc
 ## Team Tasks:
-John: Artist, Audio(?)\
+John: Artist, GDD, Audio(?)\
 Anthony: Artist\
 Will: Programmer\
 Liam:\
