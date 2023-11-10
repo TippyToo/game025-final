@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
+        if (moveSpeed <= 0) { Debug.LogWarning("character moveSpeed is set to 0 or less"); }
+        if (jumpStrength <= 0) { Debug.LogWarning("character jumpStrength is set to 0 or less"); }
+
     }
 
     // Update is called once per frame
@@ -25,14 +28,23 @@ public class PlayerController : MonoBehaviour
         // Horizontal movement
         if (Input.GetAxis("Horizontal") < 0) // Left
         {
-            myRigidbody.velocity = new Vector2(-moveSpeed * Time.deltaTime, myRigidbody.velocity.y);
-            Debug.Log("moving left");
+            myRigidbody.velocity = new Vector2(-moveSpeed, myRigidbody.velocity.y);
+            transform.localScale = new Vector2(-1, 1);
+        }
+        else if (Input.GetAxis("Horizontal") > 0) // Right
+        {
+            myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
+            transform.localScale = new Vector2(1, 1);
+
+        }
+        else // Stop
+        {
+            myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y);
         }
 
-        if (Input.GetAxis("Horizontal") > 0) // Right
+        if (Input.GetButtonDown("Jump"))
         {
-            myRigidbody.velocity = new Vector2(moveSpeed * Time.deltaTime, myRigidbody.velocity.y);
-            Debug.Log("moving right");
+            myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
         }
     }
 }
