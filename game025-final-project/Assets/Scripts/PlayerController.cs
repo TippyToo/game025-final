@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public float groundCheckSensitivty;
     private bool isGrounded;
     public float jumpRefreshCooldown;
-    public float initJumpRefreshCooldown;
+    private float initJumpRefreshCooldown;
     private int jumpsLeft;
     public int totalJumps;
 
@@ -64,20 +64,10 @@ public class PlayerController : MonoBehaviour
             }
             else { jumpRefreshCooldown -= Time.deltaTime; }
         }
-        else { jumpRefreshCooldown = initJumpRefreshCooldown; }
         if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
         {
             myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
             jumpsLeft--;
-        }
-
-
-        // if jumps:
-        //      if isGrounded:
-        //          jump
-        //      else if !hasDoubleJumped:
-        //          jump
-        //          hasDoubleJumped = true
-        //      
+        }  
     }
 }

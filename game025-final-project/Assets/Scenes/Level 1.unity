@@ -266,8 +266,7 @@ MonoBehaviour:
   jumpStrength: 12
   groundCheck: {fileID: 591973867}
   groundCheckSensitivty: 0.1
-  jumpRefreshCooldown: 0.1
-  initJumpRefreshCooldown: 0
+  jumpRefreshCooldown: 0.01
   totalJumps: 1
   groundLayer:
     serializedVersion: 2
