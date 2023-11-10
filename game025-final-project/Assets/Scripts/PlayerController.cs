@@ -58,7 +58,10 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckSensitivty, groundLayer);
         if (isGrounded)
         {
-            if (jumpRefreshCooldown <= 0) { jumpsLeft = totalJumps; }
+            if (jumpRefreshCooldown <= 0f) {
+                jumpsLeft = totalJumps;
+                jumpRefreshCooldown = initJumpRefreshCooldown;
+            }
             else { jumpRefreshCooldown -= Time.deltaTime; }
         }
         else { jumpRefreshCooldown = initJumpRefreshCooldown; }
