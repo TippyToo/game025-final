@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
     public float dashTime;
     [Tooltip("Dashing speed is moveSpeed times this")]
     public float dashSpeedMultiplier;
+    [Tooltip("How long to wait before dash is available again")]
+    public float dashCooldown;
+    private float initDashCooldown;
     private float dashTimeLeft;
     private Vector2 dashInitVelocity;
 
@@ -47,6 +50,8 @@ public class PlayerController : MonoBehaviour
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         initJumpRefreshCooldown = jumpRefreshCooldown;
+        initDashCooldown = dashCooldown;
+        dashCooldown = 0f;
         if (moveSpeed <= 0) { Debug.LogWarning("character moveSpeed is set to 0 or less"); }
         if (jumpStrength <= 0) { Debug.LogWarning("character jumpStrength is set to 0 or less"); }
 
@@ -85,9 +90,10 @@ public class PlayerController : MonoBehaviour
             }
 
             // Dash
-            if (Input.GetButtonDown("Dash") && dashTimeLeft <= 0f)
+            if (Input.GetButtonDown("Dash") && dashTimeLeft == -1 && dashCooldown <= 0)
             {
                 dashTimeLeft = dashTime;
+                dashCooldown = initDashCooldown;
             }
         }
         // Dash handler
@@ -109,6 +115,8 @@ public class PlayerController : MonoBehaviour
             controlLock = false;
             dashTimeLeft = -1f;
         }
+        if (dashCooldown > 0f) { dashCooldown -= Time.deltaTime; } else dashCooldown = 0f;
+        
 
         // Double jump handler
         if (isGrounded)
