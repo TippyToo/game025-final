@@ -10,20 +10,30 @@ public class PlayerController : MonoBehaviour
     [Tooltip("How fast the character moves")]
     public float moveSpeed;
     [Tooltip("How high the character jumps")]
+
+    // Jump variables
     public float jumpStrength;
     [Tooltip("The transform used to denote the positioning of the ground check")]
     public Transform groundCheck;
     [Tooltip("How close the groundcheck has to be to the ground to qualify as grounded")]
     public float groundCheckSensitivty;
     private bool isGrounded;
+    [Tooltip("How long after jumping before jumps can refresh. Used for ground check leniency to prevent unintended double jumps")]
     public float jumpRefreshCooldown;
     private float initJumpRefreshCooldown;
     private int jumpsLeft;
+    [Tooltip("How many jumps the character can perform before needing to land")]
     public int totalJumps;
+    [Tooltip("What layer is counted as ground, for the purpose of determining ground check")]
+    public LayerMask groundLayer;
+
+    // Dash variables
+    [Tooltip("How long in seconds to dash for")]
+    public float dashTime;
+    private float dashTimeLeft;
 
     // Utility variables
     private Rigidbody2D myRigidbody;
-    public LayerMask groundLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -64,10 +74,18 @@ public class PlayerController : MonoBehaviour
             }
             else { jumpRefreshCooldown -= Time.deltaTime; }
         }
+
+        // Jump
         if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
         {
             myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
             jumpsLeft--;
-        }  
-    }
+        }
+        
+        // Dash
+        if (Input.GetButtonDown("Dash"))
+        {
+
+        }
+    }   
 }
