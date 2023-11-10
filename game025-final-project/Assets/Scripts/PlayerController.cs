@@ -77,16 +77,6 @@ public class PlayerController : MonoBehaviour
                 myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y);
             }
 
-            if (isGrounded)
-            {
-                if (jumpRefreshCooldown <= 0f)
-                {
-                    jumpsLeft = totalJumps;
-                    jumpRefreshCooldown = initJumpRefreshCooldown;
-                }
-                else { jumpRefreshCooldown -= Time.deltaTime; }
-            }
-
             // Jump
             if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
             {
@@ -118,6 +108,17 @@ public class PlayerController : MonoBehaviour
             myRigidbody.velocity = dashInitVelocity;
             controlLock = false;
             dashTimeLeft = -1f;
+        }
+
+        // Double jump handler
+        if (isGrounded)
+        {
+            if (jumpRefreshCooldown <= 0f)
+            {
+                jumpsLeft = totalJumps;
+                jumpRefreshCooldown = initJumpRefreshCooldown;
+            }
+            else { jumpRefreshCooldown -= Time.deltaTime; }
         }
 
     }
