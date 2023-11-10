@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Public variables
-    [Tooltip(How fast the character moves)]
+    [Tooltip("How fast the character moves")]
     public float moveSpeed;
-    [Tooltip(How high the character jumps)]
+    [Tooltip("How high the character jumps")]
     public float jumpStrength;
     
 
