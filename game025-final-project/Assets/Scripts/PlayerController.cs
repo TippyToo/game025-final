@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -30,10 +31,16 @@ public class PlayerController : MonoBehaviour
     // Dash variables
     [Tooltip("How long in seconds to dash for")]
     public float dashTime;
+    [Tooltip("Dashing speed is moveSpeed times this")]
+    public float dashSpeedMultiplier;
     private float dashTimeLeft;
+    private Vector2 dashInitVelocity;
 
     // Utility variables
     private Rigidbody2D myRigidbody;
+    private bool controlLock = false;
+    private enum direction { Left, Right } 
+    private direction facing;
 
     // Start is called before the first frame update
     void Start()
@@ -48,44 +55,85 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Horizontal movement
-        if (Input.GetAxis("Horizontal") < 0) // Left
-        {
-            myRigidbody.velocity = new Vector2(-moveSpeed, myRigidbody.velocity.y);
-            transform.localScale = new Vector2(-1, 1);
-        }
-        else if (Input.GetAxis("Horizontal") > 0) // Right
-        {
-            myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
-            transform.localScale = new Vector2(1, 1);
-
-        }
-        else // Stop
-        {
-            myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y);
-        }
-
+        if (transform.localScale.x < 0) facing = direction.Left; else facing = direction.Right;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckSensitivty, groundLayer);
-        if (isGrounded)
+
+        if (!controlLock)
         {
-            if (jumpRefreshCooldown <= 0f) {
-                jumpsLeft = totalJumps;
-                jumpRefreshCooldown = initJumpRefreshCooldown;
+            // Horizontal movement
+            if (Input.GetAxis("Horizontal") < 0) // Left
+            {
+                myRigidbody.velocity = new Vector2(-moveSpeed, myRigidbody.velocity.y);
+                transform.localScale = new Vector2(-1, 1);
             }
-            else { jumpRefreshCooldown -= Time.deltaTime; }
+            else if (Input.GetAxis("Horizontal") > 0) // Right
+            {
+                myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
+                transform.localScale = new Vector2(1, 1);
+
+            }
+            else // Stop
+            {
+                myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y);
+            }
+
+            if (isGrounded)
+            {
+                if (jumpRefreshCooldown <= 0f)
+                {
+                    jumpsLeft = totalJumps;
+                    jumpRefreshCooldown = initJumpRefreshCooldown;
+                }
+                else { jumpRefreshCooldown -= Time.deltaTime; }
+            }
+
+            // Jump
+            if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
+            {
+                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
+                jumpsLeft--;
+            }
+
+            // Dash
+            if (Input.GetButtonDown("Dash") && dashTimeLeft <= 0f)
+            {
+                dashTimeLeft = dashTime;
+            }
+        }
+        // Dash handler
+        if (dashTimeLeft == dashTime)
+        {
+            dashInitVelocity = myRigidbody.velocity;
+            controlLock = true;
+            dashTimeLeft -= Time.deltaTime;
+        }
+        else if (dashTimeLeft > 0f)
+        {
+            myRigidbody.velocity = facing == direction.Left ? new Vector2(-moveSpeed * dashSpeedMultiplier, 0f) : new Vector2(moveSpeed * dashSpeedMultiplier, 0f);
+            dashTimeLeft -= Time.deltaTime;
+            if (dashTimeLeft < 0f) dashTimeLeft = 0f;
+        }
+        else if (dashTimeLeft == 0f)
+        {
+            myRigidbody.velocity = dashInitVelocity;
+            controlLock = false;
+            dashTimeLeft = -1f;
         }
 
-        // Jump
-        if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
-        {
-            myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
-            jumpsLeft--;
-        }
-        
-        // Dash
-        if (Input.GetButtonDown("Dash"))
-        {
-
-        }
-    }   
+    }
+    //IEnumerator Dash(direction dir)
+    //{
+    //    Debug.Log("Dash recieved");
+    //    Vector2 initVelocity = myRigidbody.velocity;
+    //    controlLock = true;
+    //    while (isDashing)
+    //    {
+            
+    //        dashTimeLeft -= Time.deltaTime;
+    //        Debug.Log("Dash tick");
+    //    }
+    //    myRigidbody.velocity = initVelocity;
+    //    controlLock = false;
+    //    dashTimeLeft = dashTime;
+    //}
 }
