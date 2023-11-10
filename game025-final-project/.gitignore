@@ -74,3 +74,9 @@ crashlytics-build.properties
 # Packages
 Packages/manifest.json
 Packages/packages-lock.json
+
+# Specifically for Anthony
+../FileContentIndex/
+../v17/
+../slnx.sqlite
+../VSWorkspace.json
