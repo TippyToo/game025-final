@@ -122,19 +122,4 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    //IEnumerator Dash(direction dir)
-    //{
-    //    Debug.Log("Dash recieved");
-    //    Vector2 initVelocity = myRigidbody.velocity;
-    //    controlLock = true;
-    //    while (isDashing)
-    //    {
-            
-    //        dashTimeLeft -= Time.deltaTime;
-    //        Debug.Log("Dash tick");
-    //    }
-    //    myRigidbody.velocity = initVelocity;
-    //    controlLock = false;
-    //    dashTimeLeft = dashTime;
-    //}
 }
