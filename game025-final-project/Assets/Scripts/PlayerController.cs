@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class PlayerController : MonoBehaviour
     private float initDashCooldown;
     private float dashTimeLeft;
     private Vector2 dashInitVelocity;
+    [Tooltip("Text field to display dash status in")]
+    public Text dashText;
 
     // Utility variables
     private Rigidbody2D myRigidbody;
@@ -115,7 +118,17 @@ public class PlayerController : MonoBehaviour
             controlLock = false;
             dashTimeLeft = -1f;
         }
-        if (dashCooldown > 0f) { dashCooldown -= Time.deltaTime; } else dashCooldown = 0f;
+        if (dashCooldown > 0f)
+        {
+            dashCooldown -= Time.deltaTime;
+            dashText.text = "Dash: " + MathF.Ceiling(dashCooldown) + "s";
+        }
+        else
+        {
+            dashCooldown = 0f;
+            dashText.text = "Dash: Ready!";
+        }
+
         
 
         // Double jump handler
