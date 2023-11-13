@@ -7,3 +7,6 @@ slnx.sqlite
 VSWorkspaceState.json
 .vs/slnx.sqlite
 /.vs/slnx.sqlite
+/.vscode/
+/game025-final-project/Packages/manifest.json
+/game025-final-project/Packages/packages-lock.json

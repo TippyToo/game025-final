@@ -80,3 +80,4 @@ Packages/packages-lock.json
 ../v17/
 ../slnx.sqlite
 ../VSWorkspaceState.json
+/.vscode/
