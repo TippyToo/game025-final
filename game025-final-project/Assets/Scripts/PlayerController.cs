@@ -42,6 +42,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Text field to display dash status in")]
     public Text dashText;
 
+    // Animation variables
+    private Animator myAnim;
+
     // Utility variables
     private Rigidbody2D myRigidbody;
     private bool controlLock = false;
@@ -56,6 +59,7 @@ public class PlayerController : MonoBehaviour
         initJumpRefreshCooldown = jumpRefreshCooldown;
         initDashCooldown = dashCooldown;
         dashCooldown = 0f;
+        myAnim = GetComponent<Animator>();
         if (moveSpeed <= 0) { Debug.LogWarning("character moveSpeed is set to 0 or less"); }
         if (jumpStrength <= 0) { Debug.LogWarning("character jumpStrength is set to 0 or less"); }
 
@@ -145,6 +149,11 @@ public class PlayerController : MonoBehaviour
 
         // Softlock prevention
         if (transform.position.y < YLIMIT) { Kill(); }
+
+        // Animator handler
+        myAnim.SetFloat("SpeedX", Math.Abs(myRigidbody.velocity.x));
+        myAnim.SetFloat("SpeedY", Math.Abs(myRigidbody.velocity.y));
+        myAnim.SetBool("Grounded", isGrounded);
 
     }
 
