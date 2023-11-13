@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     public float dashCooldown;
     private float initDashCooldown;
     private float dashTimeLeft;
-    private Vector2 dashInitVelocity;
+    private float dashInitVelocity;
     [Tooltip("Text field to display dash status in")]
     public Text dashText;
 
@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
         // Dash handler
         if (dashTimeLeft == dashTime)
         {
-            dashInitVelocity = myRigidbody.velocity;
+            dashInitVelocity = myRigidbody.velocity.x;
             controlLock = true;
             dashTimeLeft -= Time.deltaTime;
         }
@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (dashTimeLeft == 0f)
         {
-            myRigidbody.velocity = dashInitVelocity;
+            myRigidbody.velocity = new Vector2(dashInitVelocity, 0f);
             controlLock = false;
             dashTimeLeft = -1f;
         }
