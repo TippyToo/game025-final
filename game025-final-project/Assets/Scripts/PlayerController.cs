@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private bool controlLock = false;
     private enum direction { Left, Right } 
     private direction facing;
+    private static float YLIMIT = -200;
 
     // Start is called before the first frame update
     void Start()
@@ -121,7 +123,7 @@ public class PlayerController : MonoBehaviour
         if (dashCooldown > 0f)
         {
             dashCooldown -= Time.deltaTime;
-            dashText.text = "Dash: " + MathF.Ceiling(dashCooldown) + "s";
+            dashText.text = "Dash: " + MathF.Round(dashCooldown, 1) + "s";
         }
         else
         {
@@ -142,5 +144,15 @@ public class PlayerController : MonoBehaviour
             else { jumpRefreshCooldown -= Time.deltaTime; }
         }
 
+        // Softlock prevention
+        if (transform.position.y < YLIMIT) { Kill(); }
+
+    }
+
+    public void Kill()
+    {
+        Vector3 spawnpoint = GameObject.FindGameObjectWithTag("PlayerSpawn").transform.position;
+        transform.position = spawnpoint;
+        myRigidbody.velocity = Vector2.zero;
     }
 }
