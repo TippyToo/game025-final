@@ -45,6 +45,14 @@ public class PlayerController : MonoBehaviour
     // Animation variables
     private Animator myAnim;
 
+    // Health variables
+    [Tooltip("How much health the player currently has")]
+    public int currentHealth;
+    [Tooltip("Maximum health the player can have")]
+    public int maxHealth;
+    [Tooltip("Text Element to display health in")]
+    public Text healthDisplay;
+
     // Utility variables
     private Rigidbody2D myRigidbody;
     private bool controlLock = false;
@@ -52,7 +60,6 @@ public class PlayerController : MonoBehaviour
     private direction facing;
     private static float YLIMIT = -200;
 
-    // Start is called before the first frame update
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -65,7 +72,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.localScale.x < 0) facing = direction.Left; else facing = direction.Right;
@@ -155,6 +161,11 @@ public class PlayerController : MonoBehaviour
         myAnim.SetFloat("SpeedY", Math.Abs(myRigidbody.velocity.y));
         myAnim.SetBool("Grounded", isGrounded);
 
+        // Health handler
+        if (currentHealth < 0) Kill();
+        if (currentHealth > maxHealth) currentHealth = maxHealth;
+        healthDisplay.text = "Health: " + currentHealth;
+
     }
 
     public void Kill()
@@ -162,5 +173,6 @@ public class PlayerController : MonoBehaviour
         Vector3 spawnpoint = GameObject.FindGameObjectWithTag("PlayerSpawn").transform.position;
         transform.position = spawnpoint;
         myRigidbody.velocity = Vector2.zero;
+        currentHealth = maxHealth;
     }
 }
