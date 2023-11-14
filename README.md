@@ -13,17 +13,20 @@ For PC
 
 ## Team
 
-### Programming
+### Will
+- All Programming
+- Unity Implementation
 
-Will Titus
+### Anthony
+- Character Design & Art
 
-### Art
+### John
+- Environment Art
+- Enemy Desgin & Art
 
-Anthony, John
+### Liam
+- UI Design
 
-### UI
-
-Liam
 ## Game Story
 
 ## Gameplay
