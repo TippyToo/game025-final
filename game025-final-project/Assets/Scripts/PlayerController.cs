@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
         myAnim.SetBool("Grounded", isGrounded);
 
         // Health handler
-        if (currentHealth < 0) Kill();
+        if (currentHealth <= 0) Kill();
         if (currentHealth > maxHealth) currentHealth = maxHealth;
         healthDisplay.text = "Health: " + currentHealth;
 
@@ -174,5 +174,11 @@ public class PlayerController : MonoBehaviour
         transform.position = spawnpoint;
         myRigidbody.velocity = Vector2.zero;
         currentHealth = maxHealth;
+    }
+
+    public void Damage(int damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth < 0) currentHealth = 0;
     }
 }
