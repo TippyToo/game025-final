@@ -181,4 +181,10 @@ public class PlayerController : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth < 0) currentHealth = 0;
     }
+
+    public void ToggleLockControls() { controlLock = !controlLock; }
+
+    public void LockControls() { controlLock = true; }
+
+    public void UnlockControls() { controlLock = false; }
 }
