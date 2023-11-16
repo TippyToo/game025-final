@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e692e13e75928d542b04ee380a96e53b
+guid: 1dea9fb82fc3cd944b374c5e71c5e07e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,112 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wasteland_GroundTiles_0
+      name: Wasteland_Pipes_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250060096088afb478ff67152935830a
+      internalID: -1571077523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wasteland_Pipes_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 54
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d280ff2ca9af70a49bf9fede9a9b1227
+      internalID: 755744799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wasteland_Pipes_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 54
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e045c49cc40faa74fa5442627017b49c
+      internalID: 1368560894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wasteland_Pipes_3
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 54
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d510197cfa684974f96b9fad652e039d
+      internalID: -429237029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wasteland_Pipes_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 52
+        width: 18
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f50c854076e0bb4f98fb2b92dd2ad72
+      internalID: 186665435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wasteland_Pipes_5
       rect:
         serializedVersion: 2
         x: 0
@@ -137,17 +242,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40cb6f652c9836d4f98cd5ec4c78583f
-      internalID: -1898223831
+      spriteID: beeaaf4e9798e5e4a88724cea2747420
+      internalID: -1042342482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasteland_GroundTiles_1
+      name: Wasteland_Pipes_6
       rect:
         serializedVersion: 2
-        x: 24
+        x: 18
         y: 36
         width: 18
         height: 18
@@ -158,56 +263,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ca9bd492738ff84fa60095d2e78e057
-      internalID: 1870675599
+      spriteID: ed0b515711b61054a8b1577e0c82fbeb
+      internalID: -1464705875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasteland_GroundTiles_2
+      name: Wasteland_Pipes_7
       rect:
         serializedVersion: 2
-        x: 42
+        x: 36
         y: 36
         width: 18
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c58aba3f91f364418b6fccf929e029c
-      internalID: 1838859967
+      spriteID: 8385d4b1a458551498091a209f54c0dd
+      internalID: 206522622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasteland_GroundTiles_3
+      name: Wasteland_Pipes_8
       rect:
         serializedVersion: 2
-        x: 60
+        x: 54
         y: 36
         width: 18
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4ed2f3d810292b4a8f5b40c7258ff84
-      internalID: 1187247178
+      spriteID: a1a250ad01c1c6b41af1bfe3f9ae831a
+      internalID: -74592608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasteland_GroundTiles_4
+      name: Wasteland_Pipes_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 32
+        width: 18
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14de6f2d5d36ec34c84a0f752cad681f
+      internalID: 1950699750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wasteland_Pipes_10
       rect:
         serializedVersion: 2
         x: 0
@@ -221,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31149019df9167b4fac03322c7c64715
-      internalID: 74044725
+      spriteID: a65910d501f8f204ca19a57da5bfc7e0
+      internalID: -1679143308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasteland_GroundTiles_5
+      name: Wasteland_Pipes_11
       rect:
         serializedVersion: 2
         x: 18
@@ -242,17 +368,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf3dbf47acb2aeb48bd4c8472403d11d
-      internalID: 614060151
+      spriteID: 2b1c013f5fe4f274b9dd9e24fa6528b7
+      internalID: -908285849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasteland_GroundTiles_6
+      name: Wasteland_Pipes_12
       rect:
         serializedVersion: 2
-        x: 37
+        x: 36
         y: 18
         width: 18
         height: 18
@@ -263,17 +389,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7fe8131806b19a4fbfdc3fb713e02ca
-      internalID: 127933229
+      spriteID: ab68569435d92084286388cc2dd6b513
+      internalID: -815073615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasteland_GroundTiles_7
+      name: Wasteland_Pipes_13
       rect:
         serializedVersion: 2
-        x: 55
+        x: 54
         y: 18
         width: 18
         height: 18
@@ -284,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23c92995bc491694db584e724ab94ce9
-      internalID: -1966133740
+      spriteID: 1b3a652e69b64b3429194b74bbe5d305
+      internalID: 1564384738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasteland_GroundTiles_8
+      name: Wasteland_Pipes_15
       rect:
         serializedVersion: 2
         x: 0
@@ -305,14 +431,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7afddd5fe2c14e04a9558434019a9eb9
-      internalID: 1274967519
+      spriteID: 0f8b362f6126e184e94de71eaad1f0ae
+      internalID: 864599066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasteland_GroundTiles_9
+      name: Wasteland_Pipes_16
       rect:
         serializedVersion: 2
         x: 18
@@ -326,17 +452,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2987726af94251344af60b59961898bf
-      internalID: 1858787512
+      spriteID: e324f1304c5da264496705a08821e1a7
+      internalID: -331714914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasteland_GroundTiles_10
+      name: Wasteland_Pipes_17
       rect:
         serializedVersion: 2
-        x: 37
+        x: 36
         y: 0
         width: 18
         height: 18
@@ -347,17 +473,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f3fff511d5c89f43a04d71b2ef2ef7c
-      internalID: 715328788
+      spriteID: 1701dab1a902ecb4881101c7e099c412
+      internalID: 1877393241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasteland_GroundTiles_11
+      name: Wasteland_Pipes_18
       rect:
         serializedVersion: 2
-        x: 55
+        x: 54
         y: 0
         width: 18
         height: 18
@@ -368,29 +494,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 912e3bb4d94c5bb49bc0d2766cbcff20
-      internalID: -962482037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasteland_GroundTiles_12
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 36
-        width: 17
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 647676e3983321745a01f651d35f1f35
-      internalID: 425704539
+      spriteID: c7b04ac8c6b163f4183330e77fa65f00
+      internalID: -1022743590
       vertices: []
       indices: 
       edges: []
@@ -406,19 +511,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wasteland_GroundTiles_0: -1898223831
-      Wasteland_GroundTiles_1: 1870675599
-      Wasteland_GroundTiles_10: 715328788
-      Wasteland_GroundTiles_11: -962482037
-      Wasteland_GroundTiles_12: 425704539
-      Wasteland_GroundTiles_2: 1838859967
-      Wasteland_GroundTiles_3: 1187247178
-      Wasteland_GroundTiles_4: 74044725
-      Wasteland_GroundTiles_5: 614060151
-      Wasteland_GroundTiles_6: 127933229
-      Wasteland_GroundTiles_7: -1966133740
-      Wasteland_GroundTiles_8: 1274967519
-      Wasteland_GroundTiles_9: 1858787512
+      Wasteland_Pipes_0: -1571077523
+      Wasteland_Pipes_1: 755744799
+      Wasteland_Pipes_10: -1679143308
+      Wasteland_Pipes_11: -908285849
+      Wasteland_Pipes_12: -815073615
+      Wasteland_Pipes_13: 1564384738
+      Wasteland_Pipes_14: 1445807392
+      Wasteland_Pipes_15: 864599066
+      Wasteland_Pipes_16: -331714914
+      Wasteland_Pipes_17: 1877393241
+      Wasteland_Pipes_18: -1022743590
+      Wasteland_Pipes_2: 1368560894
+      Wasteland_Pipes_3: -429237029
+      Wasteland_Pipes_4: 186665435
+      Wasteland_Pipes_5: -1042342482
+      Wasteland_Pipes_6: -1464705875
+      Wasteland_Pipes_7: 206522622
+      Wasteland_Pipes_8: -74592608
+      Wasteland_Pipes_9: 1950699750
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
