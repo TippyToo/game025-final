@@ -62,7 +62,9 @@ The player must navigate through the vast and wild expanses of the Wasteland, in
 
 - Fight off two different types of enemies, each with their own strengths and vulnerabilities. Player is forced to consider the best method of attack in order to survive.  
 
-- Collect [CURRENCY] to exchange at the wayward shop, [SHOP NAME], for better weapons and boosts.  
+- Collect coins to exchange at the wayward shop, [SHOP NAME], for better weapons and boosts at the start of level 2.
+
+    - Shop will contain upgrades for both weapons, designed to be able to afford one upon first reaching the shop, can come back with enough for the second later.
 
 - Player must unlock various abilities and power-ups to progress.
 
@@ -103,7 +105,7 @@ The player acquires a pistol early on in level one, unlocking the ranged attack.
 
 ### Currency Mechanics
 
-To acquire weapons upgrades as well as various boosts to health, the character must collect [CURRENCY], the main currency of the Wasteland. These tokens can then be exchanged at the [SHOP NAME], a traveling shop that sells weapons and med packs to roaming explorers such as the player character.
+To acquire weapons upgrades as well as various boosts to health, the character must collect coins, the main currency of the Wasteland. These tokens can then be exchanged at the [SHOP NAME], a traveling shop that sells weapons and med packs to roaming explorers such as the player character.
 
 ### Health Mechanics
 

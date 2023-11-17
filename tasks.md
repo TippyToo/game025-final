@@ -1,7 +1,7 @@
 # Tasks:
 
 ## Tasks for next week
-Will: ~~implement pause menu~~, ~~health & damage~~, currency, ~~damage hazard~~, ~~pit hazard~~, *attack*\
+Will: shop, recode double jump, fix dash, *run start*, *attack*\
 Anthony: jump, double jump, landing, dash, *attack*, *hit*\
 John: Ground tiles, pipes, hazards, *fire*\
 Liam: Stage 1 level design, start menu
@@ -11,4 +11,5 @@ Liam: Stage 1 level design, start menu
 
 ## Known Bugs:
 - Can dash through walls
+- Can jump while free falling
 - Slopes have weird colliders
