@@ -27,6 +27,7 @@ For PC
 
 ### Liam
 - UI Design
+- Level Design
 
 ## Game Story
 
