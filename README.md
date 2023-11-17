@@ -23,6 +23,7 @@ For PC
 ### John
 - Environment Art
 - Enemy Desgin & Art
+- GDD
 
 ### Liam
 - UI Design
