@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PitHazard : MonoBehaviour
 {
-    private Vector2 respawnAt;
+    private Transform respawnAt;
     [Tooltip("Amount to damage player when falling in")]
     public int damageAmount;
     // Start is called before the first frame update
     void Start()
     {
-        respawnAt = transform.Find("Respawn").position;
+        respawnAt = transform.Find("Respawn"); ;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -18,7 +18,7 @@ public class PitHazard : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             collision.transform.GetComponent<PlayerController>().Damage(damageAmount);
-            collision.transform.position = respawnAt;
+            collision.transform.position = respawnAt.position;
             collision.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
     }
