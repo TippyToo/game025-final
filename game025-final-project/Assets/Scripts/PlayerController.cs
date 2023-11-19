@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
             {
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
+                myAnim.SetTrigger("Jump");
                 jumpsLeft--;
             }
 
@@ -158,7 +159,7 @@ public class PlayerController : MonoBehaviour
 
         // Animator handler
         myAnim.SetFloat("SpeedX", Math.Abs(myRigidbody.velocity.x));
-        myAnim.SetFloat("SpeedY", Math.Abs(myRigidbody.velocity.y));
+        myAnim.SetFloat("SpeedY", myRigidbody.velocity.y);
         myAnim.SetBool("Grounded", isGrounded);
 
         // Health handler
