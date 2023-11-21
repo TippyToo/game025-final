@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     // Movement variables
-    
     [Tooltip("How fast the character moves")]
     public float moveSpeed;
     [Tooltip("How high the character jumps")]
@@ -42,6 +41,12 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Text field to display dash status in")]
     public Text dashText;
 
+    // Attack variables
+    public CapsuleCollider2D attackRange;
+    public float attackCooldown;
+    public float attackDuration;
+    public int attackDamage;
+
     // Animation variables
     private Animator myAnim;
 
@@ -62,6 +67,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        attackRange.enabled = false;
         myRigidbody = GetComponent<Rigidbody2D>();
         initJumpRefreshCooldown = jumpRefreshCooldown;
         initDashCooldown = dashCooldown;
@@ -152,6 +158,14 @@ public class PlayerController : MonoBehaviour
                 jumpRefreshCooldown = initJumpRefreshCooldown;
             }
             else { jumpRefreshCooldown -= Time.deltaTime; }
+        }
+
+        // Attack handler
+        if (Input.GetKeyDown("Attack"))
+        {
+            myAnim.SetTrigger("Attack");
+            attackRange.enabled = true;
+
         }
 
         // Softlock prevention
