@@ -31,7 +31,11 @@ For PC
 
 ## Game Story
 
+[PLAYER CHARACTER], a wandering scavenger, has found themselves (himself) in the middle of the Wasteland without any fuel or means of transportation. Traveling through the harsh environment would surely prove fatal on foot, especially as the dangerous mutants skulk closer. Armed with just a rusty pipe, [PLAYER CHARACTER] must find a way through the wasteland and into the city, where their [his] only shot at survival lies, at the center of a hotbed of ravenous creatures and deadly obstacles. 
+
 ## Gameplay
+
+In [GAME TITLE], the player is [PLAYER CHARACTER] traversing perilous post-nuclear fallout in the hopes of finding the proper resources to gain safe passage across the ruined lands. The game is divided into two levels, one centered around the wasteland and the other centered around the city. Stranded in the midst of the arid wastes, players must make their way to the city, where vital resources lie. Beginning with a rusty pipe, the player will first have to make their way across the wasteland, fighting/avoiding mutant enemies and jumping over dangerous pitfalls and radioactive pools to gather different power-ups and weapon upgrades ahead of entering the dangerous city ruins. Once in the city, players will have their mastery of their newfound abilities put to the test as greater amounts of enemies and more difficult terrain make traversing the city risky. 
 
 ## Game Flow/Progression
 
@@ -51,6 +55,11 @@ For PC
 
 
 ## Game World
+
+The overworld is split into two primary locations: the arid wasteland in level one and the desolate ruins of [CITY NAME] in level two. Taking inspiration from the Fallout series and other sci-fi and post-apocalyptic media, the world feels rather empty and unpredictable, dangers possibly lurking at every corner. 
+Littered with tall cliffs, endless pits, rusted spike traps, and wild mutant creatures, the wasteland holds true to its name. The remains of the city reach all the way out in the wastes too, evidenced by the rusted pipes that populate the area, which drip the radioactive goop that fills the bright green pools. The wasteland is pretty sparsely populated by humans, who have largely disappeared from the Earth minus the small groups of survivors and scavengers that traverse the land. Some of these survivors have taken to collecting and trading their wares wherever they go, and one such trader has recently set up shop in the wasteland outside of [CITY NAME]. 
+A far cry from its pre-fallout appearance, the city is now mostly rubble and ruins of destroyed buildings and cracked streets. Nowadays, as a result of a scattered human population, the city has become infested with mutant creatures, migrating in from the harsh wasteland. The dark and winding paths through the city have become hotbeds for mutant attacks, leading travelers to avoid the city as much as they can. Nonetheless, the surplus of resources left behind in abandoned supermarkets and apartment homes also make the city a treasure trove, if only one is brave enough to face the life-threatening dangers that lurk within.
+
 
 ## Game Experience
 
