@@ -1368,7 +1368,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601576892}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 9005d8dd228349442a7a18ff95038fbd, type: 2}
   m_IncludeLayers:
@@ -1406,6 +1406,41 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.56015515, y: 1.6111112}
   m_EdgeRadius: 0
+--- !u!70 &601576899
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601576892}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.0295938, y: -0.103989735}
+  m_Size: {x: 2.2086575, y: 1.3043007}
+  m_Direction: 1
 --- !u!1 &657900448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,7 +1635,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889549454}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 9348cd9f77b130f4783f8776da54347a, type: 2}
   m_IncludeLayers:
@@ -5106,7 +5141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5779906678264129903, guid: 71b1fa7621c6e1c4baf926c85513e38e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6098129071130859560, guid: 71b1fa7621c6e1c4baf926c85513e38e, type: 3}
       propertyPath: m_SortingLayer
@@ -5120,6 +5155,10 @@ PrefabInstance:
       propertyPath: dashText
       value: 
       objectReference: {fileID: 140173960}
+    - target: {fileID: 7886663374025254985, guid: 71b1fa7621c6e1c4baf926c85513e38e, type: 3}
+      propertyPath: attackRange
+      value: 
+      objectReference: {fileID: 601576899}
     - target: {fileID: 7886663374025254985, guid: 71b1fa7621c6e1c4baf926c85513e38e, type: 3}
       propertyPath: healthDisplay
       value: 
@@ -5135,6 +5174,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3614159558971239917, guid: 71b1fa7621c6e1c4baf926c85513e38e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 601576898}
+    - targetCorrespondingSourceObject: {fileID: 3614159558971239917, guid: 71b1fa7621c6e1c4baf926c85513e38e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 601576899}
   m_SourcePrefab: {fileID: 100100000, guid: 71b1fa7621c6e1c4baf926c85513e38e, type: 3}
 --- !u!1001 &7693086812150547046
 PrefabInstance:
