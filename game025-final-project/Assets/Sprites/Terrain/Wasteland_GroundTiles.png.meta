@@ -593,15 +593,19 @@ TextureImporter:
       name: Wasteland_GroundTiles_22
       rect:
         serializedVersion: 2
-        x: 90
+        x: 89
         y: 54
-        width: 18
+        width: 19
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8.5, y: 9}
+        - {x: -8.5, y: -9}
+        - {x: 9.5, y: -9}
+        - {x: 9.5, y: 9}
       tessellationDetail: 0
       bones: []
       spriteID: 6b30ac4bc376e6e469649f1162577100
@@ -684,15 +688,15 @@ TextureImporter:
         serializedVersion: 2
         x: 108
         y: 54
-        width: 18
+        width: 19
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -9, y: 9}
-        - {x: -9, y: -9}
+      - - {x: -9.5, y: 9}
+        - {x: -9.5, y: -9}
         - {x: 9, y: -9}
         - {x: 9, y: 9}
       tessellationDetail: 0
