@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerSpawn
+  - PlayerCanDamage
   layers:
   - Default
   - TransparentFX

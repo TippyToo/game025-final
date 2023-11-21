@@ -126,10 +126,10 @@ TextureImporter:
       name: Obstacles2_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 62
-        width: 16
-        height: 5
+        x: 2
+        y: 77
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: Obstacles2_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 62
+        x: 21
+        y: 77
         width: 18
-        height: 5
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: Obstacles2_2
       rect:
         serializedVersion: 2
-        x: 37
-        y: 54
-        width: 16
-        height: 5
+        x: 40
+        y: 77
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: Obstacles2_3
       rect:
         serializedVersion: 2
-        x: 37
-        y: 62
-        width: 16
-        height: 5
+        x: 2
+        y: 58
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: Obstacles2_4
       rect:
         serializedVersion: 2
-        x: 1
-        y: 54
-        width: 16
-        height: 5
+        x: 21
+        y: 58
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: Obstacles2_5
       rect:
         serializedVersion: 2
-        x: 18
-        y: 54
+        x: 40
+        y: 58
         width: 18
-        height: 5
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: Obstacles2_6
       rect:
         serializedVersion: 2
-        x: 1
-        y: 46
-        width: 16
-        height: 5
+        x: 2
+        y: 39
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: Obstacles2_7
       rect:
         serializedVersion: 2
-        x: 18
-        y: 46
+        x: 21
+        y: 39
         width: 18
-        height: 5
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: Obstacles2_8
       rect:
         serializedVersion: 2
-        x: 37
-        y: 46
-        width: 16
-        height: 5
+        x: 40
+        y: 39
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,73 +312,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Obstacles2_9
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 38
-        width: 16
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 014a8b3bb60b334418834740e710ce72
-      internalID: -1238289128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Obstacles2_10
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 38
-        width: 18
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06ea74a36438d6748a57d04281666b26
-      internalID: -237495274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Obstacles2_11
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 38
-        width: 16
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86b841d58181cbd4398b4d00240650ad
-      internalID: -40192155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Obstacles2_12
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
         width: 11
         height: 19
@@ -399,7 +336,7 @@ TextureImporter:
       name: Obstacles2_13
       rect:
         serializedVersion: 2
-        x: 13
+        x: 14
         y: 0
         width: 6
         height: 15
@@ -420,7 +357,7 @@ TextureImporter:
       name: Obstacles2_14
       rect:
         serializedVersion: 2
-        x: 21
+        x: 22
         y: 0
         width: 7
         height: 11
@@ -441,7 +378,7 @@ TextureImporter:
       name: Obstacles2_15
       rect:
         serializedVersion: 2
-        x: 31
+        x: 32
         y: 0
         width: 6
         height: 5
@@ -459,57 +396,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Obstacles2_16
+      name: Obstacles2_18
       rect:
         serializedVersion: 2
-        x: 51
+        x: 52
         y: 0
         width: 13
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee0bcc603f5ece44fa2d9fca6c2ac41a
-      internalID: -297533456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Obstacles2_17
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 0
-        width: 15
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ddfbc6de12a2844ba257e9a6ba0aeac
-      internalID: 1051813264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Obstacles2_18
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 44
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -525,12 +420,12 @@ TextureImporter:
       name: Obstacles2_19
       rect:
         serializedVersion: 2
-        x: 57
-        y: 32
-        width: 6
-        height: 12
+        x: 67
+        y: 0
+        width: 15
+        height: 17
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -546,12 +441,12 @@ TextureImporter:
       name: Obstacles2_21
       rect:
         serializedVersion: 2
-        x: 57
-        y: 44
+        x: 72
+        y: 84
         width: 6
         height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -564,10 +459,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Obstacles2_23
+      name: Obstacles2_17
       rect:
         serializedVersion: 2
-        x: 46
+        x: 47
         y: 0
         width: 3
         height: 1
@@ -585,10 +480,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Obstacles2_24
+      name: Obstacles2_16
       rect:
         serializedVersion: 2
-        x: 40
+        x: 41
         y: 0
         width: 4
         height: 2
@@ -606,34 +501,34 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Obstacles2_25
+      name: Obstacles2_22
       rect:
         serializedVersion: 2
-        x: 57
-        y: 56
+        x: 60
+        y: 72
         width: 6
         height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccf987f90ee8dbb4db1270dbc3ea23d8
-      internalID: 1740555969
+      spriteID: f09877d582b22b94095cd7c618f3b083
+      internalID: 1570800423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Obstacles2_26
+      name: Obstacles2_9
       rect:
         serializedVersion: 2
-        x: 69
-        y: 56
-        width: 6
-        height: 12
+        x: 2
+        y: 20
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -641,8 +536,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 685390f17ad2fe4489d700cfbf15bc31
-      internalID: -819673966
+      spriteID: e43705c88a4b723419a6a66b5b9d05e1
+      internalID: -1238289128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles2_10
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 20
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec259c1de080b3a48a0c487588dc017a
+      internalID: -237495274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles2_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 20
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676667a7455c35744845f793b629a956
+      internalID: -40192155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles2_20
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 84
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f0cae1f7ed17b42965c2bb756db57e
+      internalID: 1504816247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles2_23
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 72
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d005c0a30a0e84eae83e4cc0d8dfb0
+      internalID: -1199937266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Obstacles2_24
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 60
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a690e42ff71f14e9bee66a0052cf13
+      internalID: 1962189122
       vertices: []
       indices: 
       edges: []
@@ -666,18 +666,19 @@ TextureImporter:
       Obstacles2_13: 1695928993
       Obstacles2_14: 83834462
       Obstacles2_15: 1852745058
-      Obstacles2_16: -297533456
-      Obstacles2_17: 1051813264
+      Obstacles2_16: 566202093
+      Obstacles2_17: 1178545367
       Obstacles2_18: 952625224
       Obstacles2_19: -1467879461
       Obstacles2_2: 805905155
       Obstacles2_20: 1504816247
       Obstacles2_21: 1399858330
       Obstacles2_22: 1570800423
-      Obstacles2_23: 1178545367
-      Obstacles2_24: 566202093
+      Obstacles2_23: -1199937266
+      Obstacles2_24: 1962189122
       Obstacles2_25: 1740555969
       Obstacles2_26: -819673966
+      Obstacles2_27: 43890997
       Obstacles2_3: -408412734
       Obstacles2_4: -1934011677
       Obstacles2_5: -467959721
