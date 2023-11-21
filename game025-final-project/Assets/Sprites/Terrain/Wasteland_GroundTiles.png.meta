@@ -378,8 +378,8 @@ TextureImporter:
       name: Wasteland_GroundTiles_12
       rect:
         serializedVersion: 2
-        x: 90
-        y: 36
+        x: 92
+        y: 18
         width: 18
         height: 18
       alignment: 0
@@ -441,8 +441,8 @@ TextureImporter:
       name: Wasteland_GroundTiles_15
       rect:
         serializedVersion: 2
-        x: 90
-        y: 18
+        x: 92
+        y: 73
         width: 18
         height: 18
       alignment: 0
@@ -467,8 +467,8 @@ TextureImporter:
       name: Wasteland_GroundTiles_16
       rect:
         serializedVersion: 2
-        x: 90
-        y: 0
+        x: 92
+        y: 55
         width: 18
         height: 18
       alignment: 0
@@ -509,8 +509,8 @@ TextureImporter:
       name: Wasteland_GroundTiles_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 54
+        x: 3
+        y: 56
         width: 18
         height: 18
       alignment: 0
@@ -530,8 +530,8 @@ TextureImporter:
       name: Wasteland_GroundTiles_19
       rect:
         serializedVersion: 2
-        x: 18
-        y: 54
+        x: 21
+        y: 56
         width: 18
         height: 18
       alignment: 0
@@ -551,8 +551,8 @@ TextureImporter:
       name: Wasteland_GroundTiles_20
       rect:
         serializedVersion: 2
-        x: 36
-        y: 54
+        x: 39
+        y: 56
         width: 18
         height: 18
       alignment: 0
@@ -572,8 +572,8 @@ TextureImporter:
       name: Wasteland_GroundTiles_21
       rect:
         serializedVersion: 2
-        x: 54
-        y: 54
+        x: 57
+        y: 56
         width: 18
         height: 18
       alignment: 0
@@ -593,8 +593,8 @@ TextureImporter:
       name: Wasteland_GroundTiles_22
       rect:
         serializedVersion: 2
-        x: 89
-        y: 54
+        x: 91
+        y: 36
         width: 19
         height: 18
       alignment: 0
@@ -618,8 +618,8 @@ TextureImporter:
       name: Wasteland_GroundTiles_23
       rect:
         serializedVersion: 2
-        x: 108
-        y: 36
+        x: 110
+        y: 18
         width: 18
         height: 18
       alignment: 0
@@ -639,8 +639,8 @@ TextureImporter:
       name: Wasteland_GroundTiles_24
       rect:
         serializedVersion: 2
-        x: 108
-        y: 18
+        x: 110
+        y: 73
         width: 18
         height: 18
       alignment: 0
@@ -665,8 +665,8 @@ TextureImporter:
       name: Wasteland_GroundTiles_25
       rect:
         serializedVersion: 2
-        x: 108
-        y: 0
+        x: 110
+        y: 55
         width: 18
         height: 18
       alignment: 0
@@ -686,8 +686,8 @@ TextureImporter:
       name: Wasteland_GroundTiles_26
       rect:
         serializedVersion: 2
-        x: 108
-        y: 54
+        x: 110
+        y: 36
         width: 19
         height: 18
       alignment: 0
@@ -738,6 +738,7 @@ TextureImporter:
       Wasteland_GroundTiles_24: 1657919045
       Wasteland_GroundTiles_25: 605937361
       Wasteland_GroundTiles_26: 1375592186
+      Wasteland_GroundTiles_27: 833186677
       Wasteland_GroundTiles_3: 1187247178
       Wasteland_GroundTiles_4: 74044725
       Wasteland_GroundTiles_5: 614060151

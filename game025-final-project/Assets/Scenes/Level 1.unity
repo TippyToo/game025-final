@@ -157,7 +157,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1807684274}
   m_Father: {fileID: 223645035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &63274680
@@ -4256,8 +4257,8 @@ Tilemap:
   - first: {x: 12, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 22
-      m_TileSpriteIndex: 20
+      m_TileIndex: 21
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 1
       m_TileColorIndex: 6
       m_TileObjectToInstantiateIndex: 65535
@@ -4397,9 +4398,9 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: c67c3664268fd9c45ab40710c72dd5aa, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 77c60f3be1b18f54dae581308f0e31bc, type: 2}
-  - m_RefCount: 5
+  - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 5962d72544f109a439100fbde6a82192, type: 2}
-  - m_RefCount: 12
+  - m_RefCount: 11
     m_Data: {fileID: 11400000, guid: f3e153535e3b4e74e875703ea5e99b50, type: 2}
   - m_RefCount: 15
     m_Data: {fileID: 11400000, guid: 0e749cff37bb28e499a76bb761fcf59b, type: 2}
@@ -4428,7 +4429,7 @@ Tilemap:
     m_Data: {fileID: 1375592186, guid: e692e13e75928d542b04ee380a96e53b, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 1838859967, guid: e692e13e75928d542b04ee380a96e53b, type: 3}
-  - m_RefCount: 5
+  - m_RefCount: 6
     m_Data: {fileID: 1187247178, guid: e692e13e75928d542b04ee380a96e53b, type: 3}
   - m_RefCount: 46
     m_Data: {fileID: -1966133740, guid: e692e13e75928d542b04ee380a96e53b, type: 3}
@@ -4448,7 +4449,7 @@ Tilemap:
     m_Data: {fileID: 1657919045, guid: e692e13e75928d542b04ee380a96e53b, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: 74044725, guid: e692e13e75928d542b04ee380a96e53b, type: 3}
-  - m_RefCount: 12
+  - m_RefCount: 11
     m_Data: {fileID: 996833157, guid: e692e13e75928d542b04ee380a96e53b, type: 3}
   - m_RefCount: 15
     m_Data: {fileID: 1870675599, guid: e692e13e75928d542b04ee380a96e53b, type: 3}
@@ -4641,8 +4642,12 @@ CompositeCollider2D:
         Y: 0
       - X: 250000000
         Y: 10000000
-      - X: 200000000
+      - X: 200277792
         Y: 10000000
+      - X: 200277792
+        Y: 0
+      - X: 200000000
+        Y: 0
       - X: 200000000
         Y: -10000000
       - X: 170000000
@@ -4653,8 +4658,12 @@ CompositeCollider2D:
         Y: 10000000
       - X: 100000000
         Y: -10000000
-      - X: -190000000
+      - X: -189722208
         Y: -10000000
+      - X: -189722208
+        Y: -20000000
+      - X: -190000000
+        Y: -20000000
       - X: -190000000
         Y: -30000000
       - X: -180000000
@@ -4673,13 +4682,17 @@ CompositeCollider2D:
       - {x: 25.999971, y: 0}
       - {x: 25, y: 0.0000294}
       - {x: 24.999971, y: 1}
-      - {x: 20, y: 0.99997073}
+      - {x: 20.027779, y: 0.99997073}
+      - {x: 20.02775, y: 0}
+      - {x: 20, y: -0.000029300001}
       - {x: 19.999971, y: -1}
       - {x: 17, y: -0.9999706}
       - {x: 16.999971, y: 1}
       - {x: 11.999992, y: 0.99999243}
       - {x: 9.999989, y: -1}
-      - {x: -19, y: -1.0000293}
+      - {x: -18.972221, y: -1.0000293}
+      - {x: -18.97225, y: -2}
+      - {x: -19, y: -2.0000293}
       - {x: -18.999971, y: -3}
       - {x: -18, y: -3.0000293}
       - {x: -17.999971, y: -4}
@@ -5050,6 +5063,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1807684273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1807684274}
+  m_Layer: 0
+  m_Name: Respawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1807684274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807684273}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 63274679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1880239853
 GameObject:
