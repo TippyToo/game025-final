@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Attack handler
-        if (Input.GetKeyDown("Attack"))
+        if (Input.GetButtonDown("Attack"))
         {
             myAnim.SetTrigger("Attack");
             attackRange.enabled = true;

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f14be693bf95d5e458058b877251fdca
+guid: 459a98c7281291241be2e149b5ebf2dc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DoubleJump-Sheet_0
+      name: GamCharacterIdle-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 25
-        height: 10
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4980c25648db37b4faf5805467ade473
-      internalID: -1207048171
+      spriteID: f57045f4ea9f073488dbc20ec36c628a
+      internalID: 1275477025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoubleJump-Sheet_1
+      name: GamCharacterIdle-Sheet_1
       rect:
         serializedVersion: 2
-        x: 25
+        x: 41
         y: 0
-        width: 25
-        height: 10
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bb1a6c6e0650c147adf22d72f2c375e
-      internalID: 1805993666
+      spriteID: 3f41053a1cd7295448ad217d2f09b500
+      internalID: 1175506720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoubleJump-Sheet_2
+      name: GamCharacterIdle-Sheet_2
       rect:
         serializedVersion: 2
-        x: 50
+        x: 82
         y: 0
-        width: 25
-        height: 10
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 815cc91febc7c3644b1c665ede594b7f
-      internalID: -431765281
+      spriteID: 3f02717bd175bcc43b864aa29aa9da58
+      internalID: -947936492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoubleJump-Sheet_3
+      name: GamCharacterIdle-Sheet_3
       rect:
         serializedVersion: 2
-        x: 75
+        x: 123
         y: 0
-        width: 25
-        height: 10
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 038c360890a830c41963165c28036cf5
-      internalID: 200065318
+      spriteID: 0765cbb581346ea40af9d691f787ec3c
+      internalID: -554029705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoubleJump-Sheet_4
+      name: GamCharacterIdle-Sheet_4
       rect:
         serializedVersion: 2
-        x: 100
+        x: 164
         y: 0
-        width: 25
-        height: 10
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 961e86b49e52cb94caedce6de5616428
-      internalID: -997051522
+      spriteID: dc090881f640ec648aa4d21db6030c49
+      internalID: 488924229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoubleJump-Sheet_5
+      name: GamCharacterIdle-Sheet_5
       rect:
         serializedVersion: 2
-        x: 125
+        x: 205
         y: 0
-        width: 25
-        height: 10
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80445b73694a1e641887da5019e0e04c
-      internalID: -125497814
+      spriteID: 5c75b7e35aabdae45b9a4f2315756ce1
+      internalID: -1250400964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoubleJump-Sheet_6
+      name: GamCharacterIdle-Sheet_6
       rect:
         serializedVersion: 2
-        x: 150
+        x: 246
         y: 0
-        width: 25
-        height: 10
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,134 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2586642709927a54dba0cdd99ffee80d
-      internalID: -1482513670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 175
-        y: 0
-        width: 25
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b19ae19d4182bdb4c9bf7203b6da53f0
-      internalID: -1918375204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 25
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5351f85cebd81ed46b6c8c356804ecbb
-      internalID: 294397687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 0
-        width: 25
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d9d692da1240db45b56efb922dfdb18
-      internalID: -2083091532
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 0
-        width: 25
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d84e62a3d2d8a3b4eb09970d43b852a4
-      internalID: -1975288394
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 275
-        y: 0
-        width: 25
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b565eabe251c79846b5d7663635617ab
-      internalID: 425218277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoubleJump-Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 0
-        width: 25
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c9d8625daa5b2c499195d4e2efe757e
-      internalID: -779515523
+      spriteID: 0083a9436a1ae174f861436bd6a10b41
+      internalID: 1152931456
       vertices: []
       indices: 
       edges: []
@@ -406,19 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DoubleJump-Sheet_0: -1207048171
-      DoubleJump-Sheet_1: 1805993666
-      DoubleJump-Sheet_10: -1975288394
-      DoubleJump-Sheet_11: 425218277
-      DoubleJump-Sheet_12: -779515523
-      DoubleJump-Sheet_2: -431765281
-      DoubleJump-Sheet_3: 200065318
-      DoubleJump-Sheet_4: -997051522
-      DoubleJump-Sheet_5: -125497814
-      DoubleJump-Sheet_6: -1482513670
-      DoubleJump-Sheet_7: -1918375204
-      DoubleJump-Sheet_8: 294397687
-      DoubleJump-Sheet_9: -2083091532
+      GamCharacterIdle-Sheet_0: 1275477025
+      GamCharacterIdle-Sheet_1: 1175506720
+      GamCharacterIdle-Sheet_2: -947936492
+      GamCharacterIdle-Sheet_3: -554029705
+      GamCharacterIdle-Sheet_4: 488924229
+      GamCharacterIdle-Sheet_5: -1250400964
+      GamCharacterIdle-Sheet_6: 1152931456
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

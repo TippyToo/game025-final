@@ -12,4 +12,3 @@ Liam: Stage 1 level design, start menu
 ## Known Bugs:
 - Can dash through walls
 - Can jump while free falling
-- Slopes have weird colliders
