@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
     public float attackCooldown;
     public float attackDuration;
     public int attackDamage;
+    public Transform attackLocation;
 
     // Animation variables
     private Animator myAnim;
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
     private bool controlLock = false;
     private enum direction { Left, Right } 
     private direction facing;
-    private static float YLIMIT = -200;
+    private static float YLIMIT = -100;
 
     void Start()
     {
@@ -82,7 +83,8 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.localScale.x < 0) facing = direction.Left; else facing = direction.Right;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckSensitivty, groundLayer);
-
+        myAnim.SetBool("Dashing", dashTimeLeft > 0);
+        Debug.Log("dashing = " + (dashTimeLeft > 0));
         if (!controlLock)
         {
             // Horizontal movement
@@ -165,7 +167,12 @@ public class PlayerController : MonoBehaviour
         {
             myAnim.SetTrigger("Attack");
             attackRange.enabled = true;
+            attackLocation.GetComponent<Animation>().Play();
 
+        }
+        else
+        {
+            attackRange.enabled = false;
         }
 
         // Softlock prevention
@@ -202,4 +209,12 @@ public class PlayerController : MonoBehaviour
     public void LockControls() { controlLock = true; }
 
     public void UnlockControls() { controlLock = false; }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PlayerCanDamage"))
+        {
+            collision.GetComponent<PlayerDamageable>().Damage(attackDamage);
+        }
+    }
 }
