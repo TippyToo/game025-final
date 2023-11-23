@@ -44,9 +44,11 @@ public class PlayerController : MonoBehaviour
     // Attack variables
     public CapsuleCollider2D attackRange;
     public float attackCooldown;
+    private float attackCooldownLeft;
     public float attackDuration;
     public int attackDamage;
     public Transform attackLocation;
+    private float attackTimeLeft;
 
     // Animation variables
     private Animator myAnim;
@@ -68,6 +70,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        attackCooldownLeft = attackCooldown;
         attackRange.enabled = false;
         myRigidbody = GetComponent<Rigidbody2D>();
         initJumpRefreshCooldown = jumpRefreshCooldown;
@@ -163,7 +166,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Attack handler
-        if (Input.GetButtonDown("Attack"))
+        if (Input.GetButtonDown("Attack") && attackTimeLeft <= 0 && attackCooldownLeft <= 0)
         {
             myAnim.SetTrigger("Attack");
             attackRange.enabled = true;
