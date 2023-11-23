@@ -2229,7 +2229,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1071222909}
   - component: {fileID: 1071222911}
-  - component: {fileID: 1071222910}
   m_Layer: 0
   m_Name: Attack Location
   m_TagString: Untagged
@@ -2252,22 +2251,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 246866477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &1071222910
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071222908}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 955a17ce19315b646b7bf57620698553, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 955a17ce19315b646b7bf57620698553, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!212 &1071222911
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2309,7 +2292,7 @@ SpriteRenderer:
   m_SortingLayerID: 2107634153
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2103006910, guid: cb36234747185884097bce0bbeb0ed97, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2317,7 +2300,7 @@ SpriteRenderer:
   m_Size: {x: 1.5, y: 0.7777778}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1080965959

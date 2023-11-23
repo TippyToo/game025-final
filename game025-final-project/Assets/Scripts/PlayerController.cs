@@ -167,7 +167,6 @@ public class PlayerController : MonoBehaviour
         {
             myAnim.SetTrigger("Attack");
             attackRange.enabled = true;
-            attackLocation.GetComponent<Animation>().Play();
 
         }
         else
