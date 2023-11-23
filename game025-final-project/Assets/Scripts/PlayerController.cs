@@ -170,11 +170,24 @@ public class PlayerController : MonoBehaviour
         {
             myAnim.SetTrigger("Attack");
             attackRange.enabled = true;
+            attackCooldownLeft = attackCooldown;
+            attackTimeLeft = attackDuration;
 
+        }
+        if (attackTimeLeft > 0f)
+        {
+            attackTimeLeft -= Time.deltaTime;
         }
         else
         {
+            attackTimeLeft = 0f;
             attackRange.enabled = false;
+            attackCooldownLeft = attackCooldown;
+        }
+        if (attackCooldownLeft > 0f)
+        {
+            attackCooldownLeft -= Time.deltaTime;
+            if (attackCooldownLeft < 0f) attackCooldownLeft = 0f;
         }
 
         // Softlock prevention
