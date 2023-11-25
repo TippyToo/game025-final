@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("How many jumps the character can perform before needing to land")]
     public int totalJumps;
     [Tooltip("What layer is counted as ground, for the purpose of determining ground check")]
+    public bool hasDoubleJump;
     public LayerMask groundLayer;
 
     // Dash variables
@@ -87,7 +88,6 @@ public class PlayerController : MonoBehaviour
         if (transform.localScale.x < 0) facing = direction.Left; else facing = direction.Right;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckSensitivty, groundLayer);
         myAnim.SetBool("Dashing", dashTimeLeft > 0);
-        Debug.Log("dashing = " + (dashTimeLeft > 0));
         if (!controlLock)
         {
             // Horizontal movement
@@ -108,11 +108,19 @@ public class PlayerController : MonoBehaviour
             }
 
             // Jump
-            if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
+            if (Input.GetButtonDown("Jump"))
             {
-                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
-                myAnim.SetTrigger("Jump");
-                jumpsLeft--;
+                if (isGrounded)
+                {
+                    myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
+                    myAnim.SetTrigger("Jump");
+                }
+                else if (hasDoubleJump)
+                {
+                    myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
+                    myAnim.SetTrigger("DoubleJump");
+                    hasDoubleJump = false;
+                }
             }
 
             // Dash
@@ -157,12 +165,17 @@ public class PlayerController : MonoBehaviour
         // Double jump handler
         if (isGrounded)
         {
-            if (jumpRefreshCooldown <= 0f)
-            {
-                jumpsLeft = totalJumps;
-                jumpRefreshCooldown = initJumpRefreshCooldown;
-            }
-            else { jumpRefreshCooldown -= Time.deltaTime; }
+            hasDoubleJump = true;
+            //if (jumpRefreshCooldown <= 0f)
+            //{
+            //    jumpsLeft = totalJumps;
+            //    jumpRefreshCooldown = initJumpRefreshCooldown;
+            //}
+            //else
+            //{
+            //    jumpRefreshCooldown -= Time.deltaTime;
+            //    if (jumpRefreshCooldown < 0f) jumpRefreshCooldown = 0f;
+            //}
         }
 
         // Attack handler
@@ -177,10 +190,11 @@ public class PlayerController : MonoBehaviour
         if (attackTimeLeft > 0f)
         {
             attackTimeLeft -= Time.deltaTime;
+            if (attackTimeLeft < 0f) attackTimeLeft = 0f;
         }
-        else
+        else if (attackTimeLeft == 0f)
         {
-            attackTimeLeft = 0f;
+            attackTimeLeft = -1f;
             attackRange.enabled = false;
             attackCooldownLeft = attackCooldown;
         }
