@@ -12,3 +12,13 @@ Liam: Stage 1 level design, start menu
 ## Known Bugs:
 - Can dash through walls
 - Can jump while free falling
+
+## What's Left
+- Pause Menu
+- Start Menu
+- Victory Menu
+- Implement Stage 1
+- Implement Stage 2
+- Shop
+- Ranged Weapon
+- Settings

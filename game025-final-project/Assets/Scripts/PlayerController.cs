@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
     public int attackDamage;
     public Transform attackLocation;
     private float attackTimeLeft;
+    public bool canAttackMidair;
 
     // Animation variables
     private Animator myAnim;
@@ -62,6 +63,14 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Text Element to display health in")]
     public Text healthDisplay;
 
+    // Death variables
+    public GameObject head;
+    public Transform headLocation;
+    public bool isAlive;
+    public float respawnDelay;
+    private Transform respawnLocation;
+    public Vector2 headFlyVariety;
+
     // Utility variables
     private Rigidbody2D myRigidbody;
     private bool controlLock = false;
@@ -71,6 +80,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        respawnLocation = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
+        isAlive = true;
         attackCooldownLeft = attackCooldown;
         attackRange.enabled = false;
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -129,6 +140,12 @@ public class PlayerController : MonoBehaviour
                 dashTimeLeft = dashTime;
                 dashCooldown = initDashCooldown;
             }
+
+            // Force Kill
+            if (Input.GetKeyDown(KeyCode.RightBracket) && isAlive)
+            {
+                Kill();
+            }
         }
         // Dash handler
         if (dashTimeLeft == dashTime)
@@ -179,7 +196,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Attack handler
-        if (Input.GetButtonDown("Attack") && attackTimeLeft <= 0 && attackCooldownLeft <= 0)
+        if (Input.GetButtonDown("Attack") && attackTimeLeft <= 0 && attackCooldownLeft <= 0 && (canAttackMidair || isGrounded))
         {
             myAnim.SetTrigger("Attack");
             attackRange.enabled = true;
@@ -213,7 +230,7 @@ public class PlayerController : MonoBehaviour
         myAnim.SetBool("Grounded", isGrounded);
 
         // Health handler
-        if (currentHealth <= 0) Kill();
+        if (currentHealth <= 0 && isAlive) Kill();
         if (currentHealth > maxHealth) currentHealth = maxHealth;
         healthDisplay.text = "Health: " + currentHealth;
 
@@ -221,10 +238,27 @@ public class PlayerController : MonoBehaviour
 
     public void Kill()
     {
-        Vector3 spawnpoint = GameObject.FindGameObjectWithTag("PlayerSpawn").transform.position;
-        transform.position = spawnpoint;
+        isAlive = false;
+        LockControls();
+        myAnim.SetTrigger("Die");
+        Rigidbody2D newHead = Instantiate(head, headLocation.position, Quaternion.identity).GetComponent<Rigidbody2D>();
+        newHead.velocity = new Vector2(UnityEngine.Random.Range(-headFlyVariety.x, headFlyVariety.x), headFlyVariety.y);
+
+        StartCoroutine(RespawnAfterSeconds(respawnDelay));
+        
+    }
+
+    public IEnumerator RespawnAfterSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        transform.position = respawnLocation.position;
+        transform.localScale = new Vector2(1, 1);
         myRigidbody.velocity = Vector2.zero;
         currentHealth = maxHealth;
+        myAnim.SetTrigger("Respawn");
+        UnlockControls();
+        isAlive = true;
+        yield return 0;
     }
 
     public void Damage(int damage)
