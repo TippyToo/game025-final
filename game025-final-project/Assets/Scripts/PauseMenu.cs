@@ -23,12 +23,10 @@ public class PauseMenu : MonoBehaviour
         if (paused)
         {
             Time.timeScale = 0f;
-            player.LockControls();
         }
         else
         {
             Time.timeScale = gameTimeScale;
-            player.UnlockControls();
         }
         pauseMenu.SetActive(paused);
 

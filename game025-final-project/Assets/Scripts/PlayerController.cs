@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("What layer is counted as ground, for the purpose of determining ground check")]
     public bool hasDoubleJump;
     public LayerMask groundLayer;
+    public LayerMask jumpLayer;
 
     // Dash variables
     [Tooltip("How long in seconds to dash for")]
@@ -77,6 +78,8 @@ public class PlayerController : MonoBehaviour
     private enum direction { Left, Right } 
     private direction facing;
     private static float YLIMIT = -100;
+    public CapsuleCollider2D mainCollider;
+    public CapsuleCollider2D deadCollider; 
 
     void Start()
     {
@@ -98,6 +101,8 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.localScale.x < 0) facing = direction.Left; else facing = direction.Right;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckSensitivty, groundLayer);
+        bool onSurface = Physics2D.OverlapCircle(groundCheck.position, groundCheckSensitivty, jumpLayer);
+        isGrounded = isGrounded || onSurface;
         myAnim.SetBool("Dashing", dashTimeLeft > 0);
         if (!controlLock)
         {
@@ -228,6 +233,7 @@ public class PlayerController : MonoBehaviour
         myAnim.SetFloat("SpeedX", Math.Abs(myRigidbody.velocity.x));
         myAnim.SetFloat("SpeedY", myRigidbody.velocity.y);
         myAnim.SetBool("Grounded", isGrounded);
+        myAnim.SetBool("Alive", isAlive);
 
         // Health handler
         if (currentHealth <= 0 && isAlive) Kill();
@@ -243,6 +249,8 @@ public class PlayerController : MonoBehaviour
         myAnim.SetTrigger("Die");
         Rigidbody2D newHead = Instantiate(head, headLocation.position, Quaternion.identity).GetComponent<Rigidbody2D>();
         newHead.velocity = new Vector2(UnityEngine.Random.Range(-headFlyVariety.x, headFlyVariety.x), headFlyVariety.y);
+        deadCollider.enabled = true;
+        mainCollider.enabled = false;
 
         StartCoroutine(RespawnAfterSeconds(respawnDelay));
         
@@ -258,6 +266,8 @@ public class PlayerController : MonoBehaviour
         myAnim.SetTrigger("Respawn");
         UnlockControls();
         isAlive = true;
+        mainCollider.enabled = true;
+        deadCollider.enabled = false;
         yield return 0;
     }
 
