@@ -63,6 +63,8 @@ public class PlayerController : MonoBehaviour
     public int maxHealth;
     [Tooltip("Text Element to display health in")]
     public Text healthDisplay;
+    public GameObject healthBar;
+    private HealthBar hp;
 
     // Death variables
     public GameObject head;
@@ -83,6 +85,10 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        healthBar = Instantiate(healthBar, new Vector3(transform.position.x + 0.5f, transform.position.y + 0.5f, 0f), new Quaternion(), transform);
+        hp = healthBar.GetComponent<HealthBar>();
+        hp.maxHealth = maxHealth;
+        hp.currentHealth = currentHealth;
         respawnLocation = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
         isAlive = true;
         attackCooldownLeft = attackCooldown;
@@ -239,6 +245,7 @@ public class PlayerController : MonoBehaviour
         if (currentHealth <= 0 && isAlive) Kill();
         if (currentHealth > maxHealth) currentHealth = maxHealth;
         healthDisplay.text = "Health: " + currentHealth;
+        hp.currentHealth = currentHealth;
 
     }
 
