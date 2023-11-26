@@ -26,7 +26,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("How many jumps the character can perform before needing to land")]
     public int totalJumps;
     [Tooltip("What layer is counted as ground, for the purpose of determining ground check")]
+    public bool hasDoubleJump;
     public LayerMask groundLayer;
+    public LayerMask jumpLayer;
 
     // Dash variables
     [Tooltip("How long in seconds to dash for")]
@@ -44,8 +46,12 @@ public class PlayerController : MonoBehaviour
     // Attack variables
     public CapsuleCollider2D attackRange;
     public float attackCooldown;
+    private float attackCooldownLeft;
     public float attackDuration;
     public int attackDamage;
+    public Transform attackLocation;
+    private float attackTimeLeft;
+    public bool canAttackMidair;
 
     // Animation variables
     private Animator myAnim;
@@ -57,16 +63,35 @@ public class PlayerController : MonoBehaviour
     public int maxHealth;
     [Tooltip("Text Element to display health in")]
     public Text healthDisplay;
+    public GameObject healthBar;
+    private HealthBar hp;
+
+    // Death variables
+    public GameObject head;
+    public Transform headLocation;
+    public bool isAlive;
+    public float respawnDelay;
+    private Transform respawnLocation;
+    public Vector2 headFlyVariety;
 
     // Utility variables
     private Rigidbody2D myRigidbody;
     private bool controlLock = false;
     private enum direction { Left, Right } 
     private direction facing;
-    private static float YLIMIT = -200;
+    private static float YLIMIT = -100;
+    public CapsuleCollider2D mainCollider;
+    public CapsuleCollider2D deadCollider; 
 
     void Start()
     {
+        healthBar = Instantiate(healthBar, new Vector3(transform.position.x + 0.5f, transform.position.y + 0.5f, 0f), new Quaternion(), transform);
+        hp = healthBar.GetComponent<HealthBar>();
+        hp.maxHealth = maxHealth;
+        hp.currentHealth = currentHealth;
+        respawnLocation = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
+        isAlive = true;
+        attackCooldownLeft = attackCooldown;
         attackRange.enabled = false;
         myRigidbody = GetComponent<Rigidbody2D>();
         initJumpRefreshCooldown = jumpRefreshCooldown;
@@ -82,7 +107,9 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.localScale.x < 0) facing = direction.Left; else facing = direction.Right;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckSensitivty, groundLayer);
-
+        bool onSurface = Physics2D.OverlapCircle(groundCheck.position, groundCheckSensitivty, jumpLayer);
+        isGrounded = isGrounded || onSurface;
+        myAnim.SetBool("Dashing", dashTimeLeft > 0);
         if (!controlLock)
         {
             // Horizontal movement
@@ -103,11 +130,19 @@ public class PlayerController : MonoBehaviour
             }
 
             // Jump
-            if (Input.GetButtonDown("Jump") && jumpsLeft > 0)
+            if (Input.GetButtonDown("Jump"))
             {
-                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
-                myAnim.SetTrigger("Jump");
-                jumpsLeft--;
+                if (isGrounded)
+                {
+                    myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
+                    myAnim.SetTrigger("Jump");
+                }
+                else if (hasDoubleJump)
+                {
+                    myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
+                    myAnim.SetTrigger("DoubleJump");
+                    hasDoubleJump = false;
+                }
             }
 
             // Dash
@@ -115,6 +150,12 @@ public class PlayerController : MonoBehaviour
             {
                 dashTimeLeft = dashTime;
                 dashCooldown = initDashCooldown;
+            }
+
+            // Force Kill
+            if (Input.GetKeyDown(KeyCode.RightBracket) && isAlive)
+            {
+                Kill();
             }
         }
         // Dash handler
@@ -152,20 +193,43 @@ public class PlayerController : MonoBehaviour
         // Double jump handler
         if (isGrounded)
         {
-            if (jumpRefreshCooldown <= 0f)
-            {
-                jumpsLeft = totalJumps;
-                jumpRefreshCooldown = initJumpRefreshCooldown;
-            }
-            else { jumpRefreshCooldown -= Time.deltaTime; }
+            hasDoubleJump = true;
+            //if (jumpRefreshCooldown <= 0f)
+            //{
+            //    jumpsLeft = totalJumps;
+            //    jumpRefreshCooldown = initJumpRefreshCooldown;
+            //}
+            //else
+            //{
+            //    jumpRefreshCooldown -= Time.deltaTime;
+            //    if (jumpRefreshCooldown < 0f) jumpRefreshCooldown = 0f;
+            //}
         }
 
         // Attack handler
-        if (Input.GetButtonDown("Attack"))
+        if (Input.GetButtonDown("Attack") && attackTimeLeft <= 0 && attackCooldownLeft <= 0 && (canAttackMidair || isGrounded))
         {
             myAnim.SetTrigger("Attack");
             attackRange.enabled = true;
+            attackCooldownLeft = attackCooldown;
+            attackTimeLeft = attackDuration;
 
+        }
+        if (attackTimeLeft > 0f)
+        {
+            attackTimeLeft -= Time.deltaTime;
+            if (attackTimeLeft < 0f) attackTimeLeft = 0f;
+        }
+        else if (attackTimeLeft == 0f)
+        {
+            attackTimeLeft = -1f;
+            attackRange.enabled = false;
+            attackCooldownLeft = attackCooldown;
+        }
+        if (attackCooldownLeft > 0f)
+        {
+            attackCooldownLeft -= Time.deltaTime;
+            if (attackCooldownLeft < 0f) attackCooldownLeft = 0f;
         }
 
         // Softlock prevention
@@ -175,20 +239,43 @@ public class PlayerController : MonoBehaviour
         myAnim.SetFloat("SpeedX", Math.Abs(myRigidbody.velocity.x));
         myAnim.SetFloat("SpeedY", myRigidbody.velocity.y);
         myAnim.SetBool("Grounded", isGrounded);
+        myAnim.SetBool("Alive", isAlive);
 
         // Health handler
-        if (currentHealth <= 0) Kill();
+        if (currentHealth <= 0 && isAlive) Kill();
         if (currentHealth > maxHealth) currentHealth = maxHealth;
         healthDisplay.text = "Health: " + currentHealth;
+        hp.currentHealth = currentHealth;
 
     }
 
     public void Kill()
     {
-        Vector3 spawnpoint = GameObject.FindGameObjectWithTag("PlayerSpawn").transform.position;
-        transform.position = spawnpoint;
+        isAlive = false;
+        LockControls();
+        myAnim.SetTrigger("Die");
+        Rigidbody2D newHead = Instantiate(head, headLocation.position, Quaternion.identity).GetComponent<Rigidbody2D>();
+        newHead.velocity = new Vector2(UnityEngine.Random.Range(-headFlyVariety.x, headFlyVariety.x), headFlyVariety.y);
+        deadCollider.enabled = true;
+        mainCollider.enabled = false;
+
+        StartCoroutine(RespawnAfterSeconds(respawnDelay));
+        
+    }
+
+    public IEnumerator RespawnAfterSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        transform.position = respawnLocation.position;
+        transform.localScale = new Vector2(1, 1);
         myRigidbody.velocity = Vector2.zero;
         currentHealth = maxHealth;
+        myAnim.SetTrigger("Respawn");
+        UnlockControls();
+        isAlive = true;
+        mainCollider.enabled = true;
+        deadCollider.enabled = false;
+        yield return 0;
     }
 
     public void Damage(int damage)
@@ -202,4 +289,12 @@ public class PlayerController : MonoBehaviour
     public void LockControls() { controlLock = true; }
 
     public void UnlockControls() { controlLock = false; }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PlayerCanDamage"))
+        {
+            collision.GetComponent<PlayerDamageable>().Damage(attackDamage);
+        }
+    }
 }

@@ -10,7 +10,7 @@ public class PitHazard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        respawnAt = transform.Find("Respawn"); ;
+        respawnAt = transform.Find("Respawn");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

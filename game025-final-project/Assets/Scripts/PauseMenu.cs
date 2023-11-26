@@ -23,23 +23,33 @@ public class PauseMenu : MonoBehaviour
         if (paused)
         {
             Time.timeScale = 0f;
-            player.LockControls();
         }
         else
         {
             Time.timeScale = gameTimeScale;
-            player.UnlockControls();
         }
         pauseMenu.SetActive(paused);
 
         if (Input.GetKeyDown(KeyCode.Escape)) { TogglePause(); }
     }
 
-    public void TogglePause() { paused = !paused; }
+    public void TogglePause() 
+    {
+        player.ToggleLockControls();
+        paused = !paused;
+    }
 
-    public void Pause() { paused = true; }
+    public void Pause()
+    {
+        player.LockControls();
+        paused = true; 
+    }
 
-    public void Resume() { paused = false; }
+    public void Resume()
+    {
+        player.UnlockControls();
+        paused = false; 
+    }
 
     public bool IsPaused() { return paused; }
 }
