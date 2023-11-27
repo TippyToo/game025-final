@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerSpawn
   - PlayerCanDamage
+  - Coin
   layers:
   - Default
   - TransparentFX
