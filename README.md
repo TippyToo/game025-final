@@ -34,7 +34,7 @@ For PC
 
 ## Game Story
 
-[PLAYER CHARACTER], a wandering scavenger, has found themselves (himself) in the middle of the Wasteland without any fuel or means of transportation. Traveling through the harsh environment would surely prove fatal on foot, especially as the dangerous mutants skulk closer. Armed with just a rusty pipe, [PLAYER CHARACTER] must find a way through the wasteland and into the city, where their [his] only shot at survival lies, at the center of a hotbed of ravenous creatures and deadly obstacles. 
+[PLAYER CHARACTER], a wandering scavenger, has found themselves in the middle of the Wasteland without any fuel or means of transportation. Traveling through the harsh environment would surely prove fatal on foot, especially as the dangerous mutants skulk closer. Armed with just a rusty pipe, [PLAYER CHARACTER] must find a way through the wasteland and into the city, where their only shot at survival lies, at the center of a hotbed of ravenous creatures and deadly obstacles. 
 
 ## Gameplay
 
