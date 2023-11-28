@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        healthBar = Instantiate(healthBar, new Vector3(transform.position.x + 0.5f, transform.position.y + 0.5f, 0f), new Quaternion(), transform);
+        healthBar = Instantiate(healthBar, new Vector3(transform.position.x - 0.12f, transform.position.y + 0.5f, 0f), new Quaternion(), transform);
         hp = healthBar.GetComponent<HealthBar>();
         hp.maxHealth = maxHealth;
         hp.currentHealth = currentHealth;
