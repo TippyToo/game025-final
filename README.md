@@ -28,6 +28,9 @@ For PC
 ### Liam
 - UI Design
 - Level Design
+- Level Implementation
+- Sound Design
+- Soundtrack #2
 
 ## Game Story
 
