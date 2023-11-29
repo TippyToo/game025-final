@@ -156,6 +156,7 @@ public class PlayerController : MonoBehaviour
             // Force Kill
             if (Input.GetKeyDown(KeyCode.RightBracket) && isAlive)
             {
+                currentHealth = 0;
                 Kill();
             }
         }
@@ -259,6 +260,13 @@ public class PlayerController : MonoBehaviour
         newHead.velocity = new Vector2(UnityEngine.Random.Range(-headFlyVariety.x, headFlyVariety.x), headFlyVariety.y);
         deadCollider.enabled = true;
         mainCollider.enabled = false;
+
+        // De-aggro all enemies
+        EnemyAI[] enemies = GameObject.FindObjectsOfType<EnemyAI>();
+        foreach (EnemyAI enemy in enemies)
+        {
+            enemy.aIType = EnemyAI.AI_Type.RandomMovement;
+        }
 
         StartCoroutine(RespawnAfterSeconds(respawnDelay));
         

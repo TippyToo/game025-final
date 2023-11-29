@@ -38,7 +38,7 @@ public class EnemyAI : MonoBehaviour
 
         myRigidbody.velocity = new Vector2(moveSpeed * ModifierOf(facingRight), myRigidbody.velocity.y);
         if (Physics2D.OverlapCircle(wallCheck.position, wallCheckSensitivity, whatIsGround) && aIType == AI_Type.RandomMovement) ChangeDirection();
-        if (Physics2D.OverlapCircle(transform.position, aggroRadius, whatIsPlayer) && aIType == AI_Type.AggroPlayer) chasePlayer = true;
+        if (Physics2D.OverlapCircle(transform.position, aggroRadius, whatIsPlayer) && aIType == AI_Type.AggroPlayer && player.isAlive) chasePlayer = true;
 
     }
 
