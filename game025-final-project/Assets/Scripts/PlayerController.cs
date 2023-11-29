@@ -21,14 +21,15 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     [Tooltip("How long after jumping before jumps can refresh. Used for ground check leniency to prevent unintended double jumps")]
     public float jumpRefreshCooldown;
-    private float initJumpRefreshCooldown;
-    private int jumpsLeft;
-    [Tooltip("How many jumps the character can perform before needing to land")]
-    public int totalJumps;
+    //private float initJumpRefreshCooldown;
+    //private int jumpsLeft;
+    //[Tooltip("How many jumps the character can perform before needing to land")]
+    //public int totalJumps;
     [Tooltip("What layer is counted as ground, for the purpose of determining ground check")]
-    public bool hasDoubleJump;
     public LayerMask groundLayer;
     public LayerMask jumpLayer;
+    public bool hasBoots;
+    private bool hasDoubleJump;
 
     // Dash variables
     [Tooltip("How long in seconds to dash for")]
@@ -94,7 +95,7 @@ public class PlayerController : MonoBehaviour
         attackCooldownLeft = attackCooldown;
         attackRange.enabled = false;
         myRigidbody = GetComponent<Rigidbody2D>();
-        initJumpRefreshCooldown = jumpRefreshCooldown;
+        //initJumpRefreshCooldown = jumpRefreshCooldown;
         initDashCooldown = dashCooldown;
         dashCooldown = 0f;
         myAnim = GetComponent<Animator>();
@@ -137,7 +138,7 @@ public class PlayerController : MonoBehaviour
                     myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
                     myAnim.SetTrigger("Jump");
                 }
-                else if (hasDoubleJump)
+                else if (hasBoots && hasDoubleJump)
                 {
                     myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
                     myAnim.SetTrigger("DoubleJump");

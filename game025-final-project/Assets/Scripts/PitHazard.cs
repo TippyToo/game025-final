@@ -17,9 +17,13 @@ public class PitHazard : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            collision.transform.GetComponent<PlayerController>().Damage(damageAmount);
-            collision.transform.position = respawnAt.position;
-            collision.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            PlayerController player = collision.transform.GetComponent<PlayerController>();
+            if (player.currentHealth > 1)
+            {
+                collision.transform.position = respawnAt.position;
+                collision.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            }
+            player.Damage(damageAmount);
         }
     }
 }
