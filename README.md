@@ -1,4 +1,4 @@
-![Placeholder image](./README%20images/Placeholder.png)
+![Placeholder image](./README%20images/Spikes.png)
 # [GAME TITLE]
 
 https://github.com/TippyToo/game025-final
