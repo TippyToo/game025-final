@@ -28,7 +28,7 @@ public class Interactable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             spriteRenderer.sprite = interactSprite;
-            interactText.gameObject.SetActive(true);
+            if (interactText != null) interactText.gameObject.SetActive(true);
         }
     }
 
@@ -37,7 +37,7 @@ public class Interactable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             spriteRenderer.sprite = baseSprite;
-            interactText.gameObject.SetActive(false);
+            if (interactText != null) interactText.gameObject.SetActive(false);
         }
     }
 }
