@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class Interactable : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Sprite baseSprite;
     public Sprite interactSprite;
+    public String interactKey = "E";
     private CircleCollider2D circleCollider;
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,11 @@ public class Interactable : MonoBehaviour
         HingeJoint2D joint2D = GetComponent<HingeJoint2D>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.E)) { InteractAction(); }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -46,4 +53,7 @@ public class Interactable : MonoBehaviour
             if (interactText != null) interactText.gameObject.SetActive(false);
         }
     }
+
+    
+    public void InteractAction() { }
 }
