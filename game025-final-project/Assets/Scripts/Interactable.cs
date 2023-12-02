@@ -10,17 +10,23 @@ public class Interactable : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Sprite baseSprite;
     public Sprite interactSprite;
+    private CircleCollider2D circleCollider;
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         baseSprite = spriteRenderer.sprite;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        try
+        {
+            circleCollider = GetComponent<CircleCollider2D>();
+        }
+        catch (System.Exception)
+        {
+            circleCollider = gameObject.AddComponent<CircleCollider2D>();
+            circleCollider.radius = interactRadius;
+            circleCollider.isTrigger = true;
+        }
+        HingeJoint2D joint2D = GetComponent<HingeJoint2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,7 +34,7 @@ public class Interactable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             spriteRenderer.sprite = interactSprite;
-            interactText.gameObject.SetActive(true);
+            if (interactText != null) interactText.gameObject.SetActive(true);
         }
     }
 
@@ -37,7 +43,7 @@ public class Interactable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             spriteRenderer.sprite = baseSprite;
-            interactText.gameObject.SetActive(false);
+            if (interactText != null) interactText.gameObject.SetActive(false);
         }
     }
 }
