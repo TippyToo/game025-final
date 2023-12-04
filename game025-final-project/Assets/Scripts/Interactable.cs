@@ -11,7 +11,7 @@ public class Interactable : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Sprite baseSprite;
     public Sprite interactSprite;
-    public String interactKey = "E";
+    //public String interactKey = "E";
     private CircleCollider2D circleCollider;
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.E)) { InteractAction(); }
+        if (Input.GetButtonDown("Interact")) { InteractAction(); }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
