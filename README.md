@@ -19,6 +19,9 @@ For PC
 
 ### Anthony
 - Character Design & Art
+- UI Design Polish
+- Environment Art
+- Enemy Design & Art
 - Item and Collectable Design & Art
 
 ### John
