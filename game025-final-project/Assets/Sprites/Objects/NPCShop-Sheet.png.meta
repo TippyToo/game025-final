@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3be8587ab42463549b141e6270d6433c
+guid: 118a31d7fb546c4498e806eed77c3a0f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Streetlights3_0
+      name: NPCShop-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 22
-        height: 57
+        width: 67
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8924c55e2c024af46b75be46aac67b0d
-      internalID: -360534754
+      spriteID: 213bf42dbfcddb345a5e9c26b5fd3727
+      internalID: -584282429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Streetlights3_1
+      name: NPCShop-Sheet_1
       rect:
         serializedVersion: 2
-        x: 22
+        x: 67
         y: 0
-        width: 25
-        height: 57
+        width: 67
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d82da108b7bae614ab1c9f0ca3106b1d
-      internalID: 1607494890
+      spriteID: dc8f7aca91b369246b659a2e1b7ce7ae
+      internalID: -137347969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Streetlights3_2
+      name: NPCShop-Sheet_2
       rect:
         serializedVersion: 2
-        x: 47
+        x: 134
         y: 0
-        width: 11
-        height: 57
+        width: 67
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 755d1c13ce0b5534d9e882763ee535a2
-      internalID: 1816323437
+      spriteID: 41345e05cee8c614ca822e5b3a11375a
+      internalID: 959989687
       vertices: []
       indices: 
       edges: []
@@ -196,9 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Streetlights3_0: -360534754
-      Streetlights3_1: 1607494890
-      Streetlights3_2: 1816323437
+      NPCShop-Sheet_0: -584282429
+      NPCShop-Sheet_1: -137347969
+      NPCShop-Sheet_2: 959989687
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
