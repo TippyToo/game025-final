@@ -128,7 +128,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -147,9 +147,9 @@ TextureImporter:
       name: DoubleJump-Sheet_1
       rect:
         serializedVersion: 2
-        x: 25
+        x: 22
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -168,9 +168,9 @@ TextureImporter:
       name: DoubleJump-Sheet_2
       rect:
         serializedVersion: 2
-        x: 50
+        x: 44
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -189,9 +189,9 @@ TextureImporter:
       name: DoubleJump-Sheet_3
       rect:
         serializedVersion: 2
-        x: 75
+        x: 66
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -210,9 +210,9 @@ TextureImporter:
       name: DoubleJump-Sheet_4
       rect:
         serializedVersion: 2
-        x: 100
+        x: 88
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -231,9 +231,9 @@ TextureImporter:
       name: DoubleJump-Sheet_5
       rect:
         serializedVersion: 2
-        x: 125
+        x: 110
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -252,9 +252,9 @@ TextureImporter:
       name: DoubleJump-Sheet_6
       rect:
         serializedVersion: 2
-        x: 150
+        x: 132
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -273,9 +273,9 @@ TextureImporter:
       name: DoubleJump-Sheet_7
       rect:
         serializedVersion: 2
-        x: 175
+        x: 154
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -294,9 +294,9 @@ TextureImporter:
       name: DoubleJump-Sheet_8
       rect:
         serializedVersion: 2
-        x: 200
+        x: 176
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -315,9 +315,9 @@ TextureImporter:
       name: DoubleJump-Sheet_9
       rect:
         serializedVersion: 2
-        x: 225
+        x: 198
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -336,9 +336,9 @@ TextureImporter:
       name: DoubleJump-Sheet_10
       rect:
         serializedVersion: 2
-        x: 250
+        x: 220
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -357,9 +357,9 @@ TextureImporter:
       name: DoubleJump-Sheet_11
       rect:
         serializedVersion: 2
-        x: 275
+        x: 242
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -378,9 +378,9 @@ TextureImporter:
       name: DoubleJump-Sheet_12
       rect:
         serializedVersion: 2
-        x: 300
+        x: 264
         y: 0
-        width: 25
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -389,7 +389,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c9d8625daa5b2c499195d4e2efe757e
+      spriteID: 9fc92a46cbede3949893d597e37c10c1
       internalID: -779515523
       vertices: []
       indices: 
