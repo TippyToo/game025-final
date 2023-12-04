@@ -54,7 +54,8 @@ The scavenger is a regular human, a survivor of the nuclear fallout that decimat
 | Move Left     | A       | Left Arrow  |
 | Move Right    | D       | Right Arrow |
 | Jump          | Space   |             |
-| Attack        | Mouse 1 |             |
+| Attack        | Mouse 1 | X           |
+| Interact      | E       |             |
 | Pause/Unpause | Escape  |             |
 
 
