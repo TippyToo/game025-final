@@ -19,7 +19,7 @@ For PC
 
 ### Anthony
 - Character Design & Art
-- Item and Collectable Design
+- Item and Collectable Design & Art
 
 ### John
 - Environment Art
@@ -43,7 +43,7 @@ In Pyrite Ruins, the scavenger traverses perilous post-nuclear fallout in the ho
 
 ## Player Character
 
-The scavenger is a regular human, a survivor of the nuclear fallout that decimated the world. They wear a gas mask and a long hooded cloak, protecting themselves from the harsh and toxic wasteland air, as they traverse the land. They have come to the city in search of a truck, rumored to still exist in the heart of the city and the only way to traverse the desert safely. At the start of the game, the scavenger has only a rusty pipe to defend themselves and traverses mostly by walking and jumping around. As the game progresses, the character will eventually gain access to a greater range of weaponry and movement, being able to double jump and dash across the wasteland as well as shoot a gun.
+The scavenger is a regular human, a survivor of the nuclear fallout that decimated the world years before. They wear a gas mask and a long hooded cloak, protecting themselves from the harsh and toxic wasteland air, as they traverse the land. They have come to the city in search of a truck, rumored to still exist in the heart of the city and the only way to traverse the desert safely. At the start of the game, the scavenger has only a rusty pipe to defend themselves and traverses mostly by walking and jumping around. As the game progresses, the character will eventually gain access to a greater range of weaponry and movement, being able to double jump and dash across the wasteland as well as shoot a gun.
 
 ## Controls
 
@@ -84,7 +84,7 @@ The player must navigate through the vast and wild expanses of the Wasteland, in
 - Player must unlock various abilities and power-ups to progress.
 
 ### Level 2
-The player character has now reached the remnants of the destroyed city, [CITY NAME], and must face the growing threat waiting at its center.
+The player character has now reached the remnants of the destroyed city, and must face the growing threat waiting at its center.
 
 - Final boss is located at the end of the level and must be defeated to beat the game. Boss has multiple attacks, forcing player to quickly switch between weapons and use various abilities to take it down.  
 
@@ -124,9 +124,11 @@ To acquire weapons upgrades as well as various boosts to health, the character m
 
 ### Health Mechanics
 
-The player character’s health, located in the corner of the screen and indicated by a number of hearts, lowers when damaged by enemies and obstacles and does not replenish on its own. Should the player character run out of health, the player character dies and the game is restarted from the start of the level. Health can be replenished through the med packs bought from the shop.
+The player character’s health, located in the corner of the screen and indicated by a number of hearts, lowers when damaged by enemies and obstacles and does not replenish on its own. Should the player character run out of health, the player character dies and the game is restarted from the start of the level. Health can be replenished at the occasional barrelfire.
 
 ## Enemies
 
-The wasteland and city have become overrun by mutated hounds, rabid and dangerous creatures that chase after anything that moves. After years of radiation exposure, their fur has mutated into sharp quills, which they use to hunt other animals and the occassional human. They are fiercely territorial, chasing after anything that steps into their space. The player will first encounter them in the wasteland, where they usually roam. However, a large pack of these hounds have taken over the nearby city. As the player progresses to level 2, the amount of enemies they will face has increased as they delve deeper into the hounds' territory. 
-At the end of the level 2, the player will face off against the pack leader, a large mutated hound with multiple heads and a towering height. The leader is heartier and fiercer, posing a serious threat to the player. 
+The wasteland is a generally empty and desolate place, not fit for most lifeforms. However, as a result of mutations spurred on by the leaks of radioactive waste, living radioactive slime have come to inhabit the abandoned wastes. While generally not hostile and slow in their movements, these creatures can harm a player if they get too close. 
+
+The city have become overrun by mutated hounds, rabid and dangerous creatures that chase after anything that moves. After years of radiation exposure, their fur has mutated into sharp quills, which they use to hunt other animals and the occassional human. They are fiercely territorial, chasing after anything that steps into their space. A particularly large pack of these hounds have taken over the nearby city. As the player progresses to level 2, the amount of enemies they will face will increase as they delve deeper into the hounds' territory. 
+At the end of the level 2, the player will face off against the pack leader, a large mutated hound with multiple heads and a towering height. The leader is heartier and fiercer, posing a serious threat to the player as they near the end of their quest.

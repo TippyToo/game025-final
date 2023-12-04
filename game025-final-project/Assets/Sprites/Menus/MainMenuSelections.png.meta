@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06d6cd129d9b71e4983404f09d33d1de
+guid: 00c5fc5456da4c24f8413cc41a42e174
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,202 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Reward_Car1_0
+      name: MainMenuSelections_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455345f7a4b726c46b255fa38e5f2724
+      internalID: -54667544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainMenuSelections_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 54
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fdf8c8d6882524f8818777aeef3ec3
+      internalID: -692637265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainMenuSelections_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 54
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a10373bb68b5954eb1d59c9b888f27c
+      internalID: 2072193334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainMenuSelections_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 33
+        width: 53
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f323a5505faa4d64387758065ed22e5e
+      internalID: -1462491188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainMenuSelections_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 33
+        width: 53
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04aa6af07877974384586a1f165c71a
+      internalID: -410070063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainMenuSelections_5
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 33
+        width: 53
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31915be10c55c594081a9f3554a64a4a
+      internalID: -348330742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainMenuSelections_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 47
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f74d50d03a75d489a7ef8925d5c885
+      internalID: -863974840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainMenuSelections_7
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 18
+        width: 47
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fc0792810523a42afcfcf7ed9654a7
+      internalID: -1578427678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainMenuSelections_8
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 18
+        width: 47
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f0898ccf20f9f429336d1d4d6b84ef
+      internalID: -1093851662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainMenuSelections_9
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 101
-        height: 42
+        width: 27
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b3f5eff74cee034bad8c12544183f8e
-      internalID: 1910947612
+      spriteID: cc182869e33609e48b3fc946e333c2c9
+      internalID: -401925276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Reward_Car1_1
+      name: MainMenuSelections_10
       rect:
         serializedVersion: 2
-        x: 101
+        x: 53
         y: 0
-        width: 101
-        height: 42
+        width: 27
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 568e7f0217096e145a49d4336d51dd97
-      internalID: 541575655
+      spriteID: 518787410d3b48c4ba5c626212087b12
+      internalID: -1166222321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Reward_Car1_2
+      name: MainMenuSelections_11
       rect:
         serializedVersion: 2
-        x: 202
+        x: 106
         y: 0
-        width: 101
-        height: 42
+        width: 27
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,50 +368,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07c9aabe56ea60a42b8da5a50f83fa87
-      internalID: 1692791287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reward_Car1_3
-      rect:
-        serializedVersion: 2
-        x: 303
-        y: 0
-        width: 101
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60feddf43440a6942a2479bf6d20592e
-      internalID: -210624679
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Reward_Car1_4
-      rect:
-        serializedVersion: 2
-        x: 404
-        y: 0
-        width: 101
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85276affb38ff694883fb9afe004fedf
-      internalID: -1977344467
+      spriteID: 9ef2315bda5124f43b7016940bc584d8
+      internalID: -1471643617
       vertices: []
       indices: 
       edges: []
@@ -238,11 +385,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Reward_Car1_0: 1910947612
-      Reward_Car1_1: 541575655
-      Reward_Car1_2: 1692791287
-      Reward_Car1_3: -210624679
-      Reward_Car1_4: -1977344467
+      MainMenuSelections_0: -54667544
+      MainMenuSelections_1: -692637265
+      MainMenuSelections_10: -1166222321
+      MainMenuSelections_11: -1471643617
+      MainMenuSelections_2: 2072193334
+      MainMenuSelections_3: -1462491188
+      MainMenuSelections_4: -410070063
+      MainMenuSelections_5: -348330742
+      MainMenuSelections_6: -863974840
+      MainMenuSelections_7: -1578427678
+      MainMenuSelections_8: -1093851662
+      MainMenuSelections_9: -401925276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
