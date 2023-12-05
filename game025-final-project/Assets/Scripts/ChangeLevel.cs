@@ -34,6 +34,7 @@ public class ChangeLevel : MonoBehaviour
 
     public void ForceNextStage()
     {
+        fader = FindObjectOfType<Fadein>();
         fader.FadeToBlack();
         player.LockControls();
         StartCoroutine(ToNextStage());

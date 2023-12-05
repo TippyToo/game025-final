@@ -7,7 +7,7 @@ public class BootPickup : Interactable
     public GameObject bootIcon;
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && inRange)
+        if (Input.GetButtonDown("Interact") && inRange && active)
         {
             InteractAction();
         }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 04149f694c2e98d4c932f6b7572d2cd9
+guid: 6edf258df8bfe7e4fa90df89ede59db8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 18
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ShopSign-Sheet_0
+      name: HUDHealthBar_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 36
-        height: 46
+        y: 12
+        width: 65
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 908626e199979bc4bb1dfd8aa753f9cc
-      internalID: 2112130017
+      spriteID: 0c5bb6e05041c4d4fba9de8deb4bd640
+      internalID: 937368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShopSign-Sheet_1
+      name: HUDHealthBar_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 0
         y: 0
-        width: 36
-        height: 46
+        width: 65
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52b04bb8622bdb046b78e23384fc1541
-      internalID: -267401215
+      spriteID: 85ecd544230cbac47a787533c5e5020d
+      internalID: 2094068221
       vertices: []
       indices: 
       edges: []
@@ -175,8 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ShopSign-Sheet_0: 2112130017
-      ShopSign-Sheet_1: -267401215
+      HUDHealthBar_0: 937368
+      HUDHealthBar_1: 2094068221
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
