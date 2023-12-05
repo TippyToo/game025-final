@@ -11,44 +11,45 @@ public class Damage : MonoBehaviour
     private Rigidbody2D playerBody;
     public bool doKnockback = true;
     public float knockbackTime;
-    private float knockbackTimeLeft;
+    public float knockbackTimeLeft;
     public float knockbackSpeed;
 
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
         playerBody = player.GetComponent<Rigidbody2D>();
-        knockbackTimeLeft = knockbackTime;
     }
 
     void Update()
     {
         if (doKnockback)
         {
-            if (knockbackTimeLeft > 0) 
+            if (knockbackTimeLeft > 0f) 
             {
                 player.LockControls();
                 if (PlayerToRight())
                 {
-                    playerBody.velocity = new Vector2(knockbackSpeed, knockbackSpeed / 2);
+                    playerBody.velocity = new Vector2(knockbackSpeed, knockbackSpeed / 2f);
                 }
                 else
                 {
-                    playerBody.velocity = new Vector2(-knockbackSpeed, knockbackSpeed / 2);
+                    playerBody.velocity = new Vector2(-knockbackSpeed, knockbackSpeed / 3f);
                 }
                 knockbackTimeLeft -= Time.deltaTime;
-                if (knockbackTime < 0) 
+                if (knockbackTimeLeft < 0f && player.isAlive) 
                 {
+                    Debug.Log("controls unlocked");
                     player.UnlockControls();
                 }
             }
         }
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         if (other.transform.CompareTag("Player") && player.isAlive && !player.controlLock)
         {
-            other.gameObject.GetComponent<PlayerController>().Damage(damageAmount);
+            player.Damage(damageAmount);
+            if (doKnockback && player.currentHealth > damageAmount) knockbackTimeLeft = knockbackTime;
         }
     }
 

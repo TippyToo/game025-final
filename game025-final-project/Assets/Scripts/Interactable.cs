@@ -13,9 +13,12 @@ public class Interactable : MonoBehaviour
     public Sprite interactSprite;
     //public String interactKey = "E";
     private CircleCollider2D circleCollider;
+    public PlayerController player;
+    public bool inRange;
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<PlayerController>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         baseSprite = spriteRenderer.sprite;
         try
@@ -28,18 +31,15 @@ public class Interactable : MonoBehaviour
             circleCollider.radius = interactRadius;
             circleCollider.isTrigger = true;
         }
-        HingeJoint2D joint2D = GetComponent<HingeJoint2D>();
     }
 
-    private void Update()
-    {
-        if (Input.GetButtonDown("Interact")) { InteractAction(); }
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            inRange = true;
             spriteRenderer.sprite = interactSprite;
             if (interactText != null) interactText.gameObject.SetActive(true);
         }
@@ -49,11 +49,12 @@ public class Interactable : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            inRange = false;
             spriteRenderer.sprite = baseSprite;
             if (interactText != null) interactText.gameObject.SetActive(false);
         }
     }
 
-    
-    public void InteractAction() { }
+
+    //public void InteractAction();
 }

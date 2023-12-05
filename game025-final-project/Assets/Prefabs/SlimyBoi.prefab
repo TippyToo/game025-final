@@ -161,6 +161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
+  doKnockback: 1
+  knockbackTime: 0.25
+  knockbackTimeLeft: 0
+  knockbackSpeed: 10
 --- !u!114 &2693135519797836280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +238,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2480149348664172423}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

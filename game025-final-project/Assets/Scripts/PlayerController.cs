@@ -305,6 +305,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("PlayerCanDamage"))
         {
             collision.GetComponent<PlayerDamageable>().Damage(attackDamage);
+            Debug.Log("damaged enemy");
         }
     }
 }
