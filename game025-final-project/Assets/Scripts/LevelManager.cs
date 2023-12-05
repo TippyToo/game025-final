@@ -18,6 +18,8 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         coinDisplay.text = coins.ToString();
+        if (Input.GetKeyDown(KeyCode.Equals)) { addCoins(1); }
+        if (Input.GetKeyDown(KeyCode.Minus)) { addCoins(-1); }
     }
 
     public void addCoins(int count)

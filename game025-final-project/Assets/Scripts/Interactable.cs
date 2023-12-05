@@ -8,7 +8,7 @@ public class Interactable : MonoBehaviour
 {
     public float interactRadius;
     public GameObject interactText;
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteShow;
     private Sprite baseSprite;
     public Sprite interactSprite;
     //public String interactKey = "E";
@@ -20,8 +20,8 @@ public class Interactable : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        baseSprite = spriteRenderer.sprite;
+        spriteShow = GetComponent<SpriteRenderer>();
+        baseSprite = spriteShow.sprite;
         try
         {
             circleCollider = GetComponent<CircleCollider2D>();
@@ -41,7 +41,7 @@ public class Interactable : MonoBehaviour
         if (active && collision.CompareTag("Player"))
         {
             inRange = true;
-            spriteRenderer.sprite = interactSprite;
+            spriteShow.sprite = interactSprite;
             if (interactText != null) interactText.SetActive(true);
         }
     }
@@ -51,7 +51,7 @@ public class Interactable : MonoBehaviour
         if (active && collision.CompareTag("Player"))
         {
             inRange = false;
-            spriteRenderer.sprite = baseSprite;
+            spriteShow.sprite = baseSprite;
             if (interactText != null) interactText.SetActive(false);
         }
     }
