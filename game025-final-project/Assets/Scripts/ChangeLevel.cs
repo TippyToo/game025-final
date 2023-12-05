@@ -10,6 +10,7 @@ public class ChangeLevel : MonoBehaviour
     public AudioClip stage2Music;
     public float timeBetweenStages;
     public Transform citySpawn;
+    public Transform playerSpawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +44,7 @@ public class ChangeLevel : MonoBehaviour
         yield return new WaitForSeconds(0.517f);
         StartCoroutine(WaitNextStage());
         player.transform.position = citySpawn.position;
+        playerSpawn.position = citySpawn.position;
         music.Stop();
         music.clip = stage2Music;
         yield return 0;
