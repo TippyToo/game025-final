@@ -209,7 +209,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Attack handler
-        if (Input.GetButtonDown("Attack") && attackTimeLeft <= 0 && attackCooldownLeft <= 0 && (canAttackMidair || isGrounded))
+        if (Input.GetButtonDown("Attack") && attackTimeLeft <= 0 && attackCooldownLeft <= 0 && (canAttackMidair || isGrounded) && !controlLock)
         {
             myAnim.SetTrigger("Attack");
             attackRange.enabled = true;

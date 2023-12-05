@@ -121,7 +121,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PauseMenuButtons_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 136
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1b5c1b0773761419afc15657de1dbf
+      internalID: -158856609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenuButtons_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 136
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ea0940f0a0f734bb4e6d192cfff463
+      internalID: 1396688177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenuButtons_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 136
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8c1f678d6354141a364b15f93c3472
+      internalID: -2074941496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenuButtons_3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 87
+        width: 60
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1b45dd2b373014e859ccc65b659596
+      internalID: -741126369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenuButtons_4
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 87
+        width: 60
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7dd59ad7338fc41b4de3d97d1d27e0
+      internalID: -1355072075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenuButtons_5
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 87
+        width: 60
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c508d4e38319a3d4bbfbc5eb33131b31
+      internalID: 1277480320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenuButtons_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 45
+        width: 61
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cbebee26f4a9343b963a5403895be6
+      internalID: 777655895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenuButtons_7
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 45
+        width: 61
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7940192cbc96048b8de66de1c87b98
+      internalID: -1141232839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenuButtons_8
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 45
+        width: 61
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7477a9e065891c548b22af44ea4aeba9
+      internalID: 469366451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +321,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PauseMenuButtons_0: -158856609
+      PauseMenuButtons_1: 1396688177
+      PauseMenuButtons_2: -2074941496
+      PauseMenuButtons_3: -741126369
+      PauseMenuButtons_4: -1355072075
+      PauseMenuButtons_5: 1277480320
+      PauseMenuButtons_6: 777655895
+      PauseMenuButtons_7: -1141232839
+      PauseMenuButtons_8: 469366451
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

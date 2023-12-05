@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     private bool paused;
     private PlayerController player;
     public float gameTimeScale;
+    public GameObject settingsMenu;
   
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,11 @@ public class PauseMenu : MonoBehaviour
         }
         pauseMenu.SetActive(paused);
 
-        if (Input.GetKeyDown(KeyCode.Escape)) { TogglePause(); }
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            TogglePause(); 
+            settingsMenu.SetActive(false);
+        }
     }
 
     public void TogglePause() 
@@ -52,4 +57,14 @@ public class PauseMenu : MonoBehaviour
     }
 
     public bool IsPaused() { return paused; }
+
+    public void Settings()
+    {
+        settingsMenu.SetActive(!settingsMenu.activeSelf);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
