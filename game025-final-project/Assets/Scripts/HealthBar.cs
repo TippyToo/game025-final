@@ -8,11 +8,25 @@ public class HealthBar : MonoBehaviour
     public int currentHealth = 1;
     private Transform green;
     private Transform red;
+    private RectTransform greenRect;
+    private RectTransform redRect;
+    public Vector3 greenPos;
+    private float initScale;
+    public bool forPlayer;
     // Start is called before the first frame update
     void Start()
     {
-        green = transform.Find("Green");
-        red = transform.Find("Red");
+        if (forPlayer)
+        {
+            greenRect = (RectTransform)transform.Find("Green");
+            redRect = (RectTransform)transform.Find("Red");
+            initScale = greenRect.localScale.x;
+        }
+        else
+        {
+            green = transform.Find("Green");
+            red = transform.Find("Red");
+        }
 
     }
 
@@ -24,8 +38,17 @@ public class HealthBar : MonoBehaviour
         if (maxHealth == 0) maxHealth = 1;
 
         float currentHealthPercent = currentHealth / (float) maxHealth;
-        green.localScale = new Vector3(currentHealthPercent, 1, 0);
-        green.position = new Vector3(red.position.x + PosFromScale(currentHealthPercent), red.position.y, 0);
+        if (forPlayer)
+        {
+            greenPos = greenRect.localPosition;
+            greenRect.localScale = new Vector3(currentHealthPercent * initScale, initScale, initScale);
+            //greenRect.localPosition = new Vector3(PosFromScale(currentHealthPercent), redRect.localPosition.y, redRect.localPosition.z);
+        }
+        else
+        {
+            green.localScale = new Vector3(currentHealthPercent, 1, 0);
+            green.position = new Vector3(red.position.x + PosFromScale(currentHealthPercent), red.position.y, 0);
+        }
     }
 
     private float PosFromScale(float x)

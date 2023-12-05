@@ -13,11 +13,13 @@ public class PauseMenu : MonoBehaviour
     public float gameTimeScale;
     public GameObject settingsMenu;
     public float timeToMenu = 0.517f;
+    public GameObject faderObject;
     private Fadein fader;
   
     // Start is called before the first frame update
     void Start()
     {
+        faderObject.SetActive(true);
         pauseMenu.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         fader = FindObjectOfType<Fadein>();

@@ -41,8 +41,9 @@ public class PlayerController : MonoBehaviour
     private float initDashCooldown;
     private float dashTimeLeft;
     private float dashInitVelocity;
-    [Tooltip("Text field to display dash status in")]
-    public Text dashText;
+    public bool unlockedDash;
+    //[Tooltip("Text field to display dash status in")]
+    //public Text dashText;
 
     // Attack variables
     public CapsuleCollider2D attackRange;
@@ -63,9 +64,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Maximum health the player can have")]
     public int maxHealth;
     [Tooltip("Text Element to display health in")]
-    public Text healthDisplay;
-    public GameObject healthBar;
-    private HealthBar hp;
+    //public Text healthDisplay;
+    //public GameObject healthBar;
+    public HealthBar hp;
 
     // Death variables
     public GameObject head;
@@ -86,8 +87,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        healthBar = Instantiate(healthBar, new Vector3(transform.position.x - 0.12f, transform.position.y + 0.5f, 0f), new Quaternion(), transform);
-        hp = healthBar.GetComponent<HealthBar>();
+        //healthBar = Instantiate(healthBar, new Vector3(transform.position.x - 0.12f, transform.position.y + 0.5f, 0f), new Quaternion(), transform);
+        //hp = healthBar.GetComponent<HealthBar>();
         hp.maxHealth = maxHealth;
         hp.currentHealth = currentHealth;
         respawnLocation = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
@@ -147,7 +148,7 @@ public class PlayerController : MonoBehaviour
             }
 
             // Dash
-            if (Input.GetButtonDown("Dash") && dashTimeLeft == -1 && dashCooldown <= 0)
+            if (Input.GetButtonDown("Dash") && dashTimeLeft == -1 && dashCooldown <= 0 && unlockedDash)
             {
                 dashTimeLeft = dashTime;
                 dashCooldown = initDashCooldown;
@@ -182,12 +183,12 @@ public class PlayerController : MonoBehaviour
         if (dashCooldown > 0f)
         {
             dashCooldown -= Time.deltaTime;
-            dashText.text = "Dash: " + MathF.Round(dashCooldown, 1) + "s";
+            //dashText.text = "Dash: " + MathF.Round(dashCooldown, 1) + "s";
         }
         else
         {
             dashCooldown = 0f;
-            dashText.text = "Dash: Ready!";
+            //dashText.text = "Dash: Ready!";
         }
 
         
@@ -246,8 +247,9 @@ public class PlayerController : MonoBehaviour
         // Health handler
         if (currentHealth <= 0 && isAlive) Kill();
         if (currentHealth > maxHealth) currentHealth = maxHealth;
-        healthDisplay.text = "Health: " + currentHealth;
+        //healthDisplay.text = "Health: " + currentHealth;
         hp.currentHealth = currentHealth;
+        hp.maxHealth = maxHealth;
 
     }
 
@@ -307,5 +309,15 @@ public class PlayerController : MonoBehaviour
             collision.GetComponent<PlayerDamageable>().Damage(attackDamage);
             Debug.Log("damaged enemy");
         }
+    }
+
+    public void GiveSwordUpgrade()
+    {
+
+    }
+
+    public void GiveHealthUpgrade()
+    {
+
     }
 }

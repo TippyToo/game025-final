@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Interactable : MonoBehaviour 
 {
     public float interactRadius;
-    public Text interactText;
+    public GameObject interactText;
     private SpriteRenderer spriteRenderer;
     private Sprite baseSprite;
     public Sprite interactSprite;
@@ -15,6 +15,7 @@ public class Interactable : MonoBehaviour
     private CircleCollider2D circleCollider;
     public PlayerController player;
     public bool inRange;
+    public bool active;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,21 +38,21 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (active && collision.CompareTag("Player"))
         {
             inRange = true;
             spriteRenderer.sprite = interactSprite;
-            if (interactText != null) interactText.gameObject.SetActive(true);
+            if (interactText != null) interactText.SetActive(true);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (active && collision.CompareTag("Player"))
         {
             inRange = false;
             spriteRenderer.sprite = baseSprite;
-            if (interactText != null) interactText.gameObject.SetActive(false);
+            if (interactText != null) interactText.SetActive(false);
         }
     }
 
