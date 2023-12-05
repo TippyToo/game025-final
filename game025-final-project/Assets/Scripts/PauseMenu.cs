@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class PauseMenu : MonoBehaviour
@@ -10,12 +12,15 @@ public class PauseMenu : MonoBehaviour
     private PlayerController player;
     public float gameTimeScale;
     public GameObject settingsMenu;
+    public float timeToMenu = 0.517f;
+    private Fadein fader;
   
     // Start is called before the first frame update
     void Start()
     {
         pauseMenu.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        fader = FindObjectOfType<Fadein>();
     }
 
     // Update is called once per frame
@@ -61,10 +66,20 @@ public class PauseMenu : MonoBehaviour
     public void Settings()
     {
         settingsMenu.SetActive(!settingsMenu.activeSelf);
+        settingsMenu.transform.Find("Volume").Find("Volume Slider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("Volume");
     }
 
     public void Quit()
     {
-        Application.Quit();
+        Resume();
+        fader.FadeToBlack();
+        StartCoroutine(LoadMenu());
+    }
+
+    IEnumerator LoadMenu()
+    {
+        yield return new WaitForSeconds(timeToMenu);
+        SceneManager.LoadScene(0);
+        yield return 0;
     }
 }

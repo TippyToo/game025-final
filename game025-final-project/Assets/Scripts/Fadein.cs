@@ -5,11 +5,12 @@ using UnityEngine;
 public class Fadein : MonoBehaviour
 {
     private Animator fadeAnim;
+    public float secs;
     // Start is called before the first frame update
     void Start()
     {
         fadeAnim = GetComponent<Animator>();
-        FadeToEmpty();
+        StartCoroutine(WaitThenFadeIn());
     }
 
     public void FadeToBlack()
@@ -30,5 +31,12 @@ public class Fadein : MonoBehaviour
     public void InstantFadeEmpty()
     {
         fadeAnim.SetTrigger("InstantFadeEmpty");
+    }
+
+    IEnumerator WaitThenFadeIn()
+    {
+        yield return new WaitForSeconds(secs);
+        FadeToEmpty();
+        yield return 0;
     }
 }

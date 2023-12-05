@@ -16,6 +16,8 @@ public class StartMenu : MonoBehaviour
     public GameObject creditsScreen;
     public float timeBeforeCredits;
     private DisplayText textScript;
+    private Slider volumeSetting;
+    private Slider difficultySetting;
     public int levelToLoad;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,8 @@ public class StartMenu : MonoBehaviour
         creditsScreen.SetActive(false);
         fadeoutScreen.SetActive(false);
         textScript = creditsScreen.transform.Find("Text").GetComponent<DisplayText>();
+        volumeSetting = settingsScreen.transform.Find("Volume").Find("Volume Slider").GetComponent<Slider>();
+        difficultySetting = settingsScreen.transform.Find("Difficulty").Find("Difficulty Slider").GetComponent<Slider>();
 
     }
 
@@ -33,8 +37,8 @@ public class StartMenu : MonoBehaviour
     {
         if (settingsScreen.activeSelf)
         {
-            PlayerPrefs.SetFloat("Volume", settingsScreen.transform.Find("Volume").Find("Volume Slider").GetComponent<Slider>().value);
-            PlayerPrefs.SetInt("Difficulty", Convert.ToInt32(settingsScreen.transform.Find("Difficulty").Find("Difficulty Slider").GetComponent<Slider>().value));
+            PlayerPrefs.SetFloat("Volume", volumeSetting.value);
+            PlayerPrefs.SetInt("Difficulty", Convert.ToInt32(difficultySetting.value));
         }
     }
 
@@ -48,6 +52,8 @@ public class StartMenu : MonoBehaviour
     public void ToggleSettings()
     {
         settingsScreen.SetActive(!settingsScreen.activeSelf);
+        volumeSetting.value = PlayerPrefs.GetFloat("Volume");
+        difficultySetting.value = PlayerPrefs.GetInt("Difficulty");
         creditsScreen.SetActive(false);
         
     }
