@@ -1,4 +1,4 @@
-![Placeholder image](./README%20images/Spikes.png)
+![Background image of the wasteland with some ruined buildings.](./README%20images/MainMenuBackground.png)
 # Pyrite Ruins
 
 https://github.com/TippyToo/game025-final
@@ -46,7 +46,7 @@ In Pyrite Ruins, the scavenger traverses perilous post-nuclear fallout in the ho
 
 ## Player Character
 
-![The scavenger standing still.](./README%20images/Character.png)
+![The scavenger standing still.](./README%20images/Character(1).png)
 
 The scavenger is a regular human, a survivor of the nuclear fallout that decimated the world years before. They wear a gas mask and a long hooded cloak, protecting themselves from the harsh and toxic wasteland air, as they traverse the land. They have come to the city in search of a truck, rumored to still exist in the heart of the city and the only way to traverse the desert safely. At the start of the game, the scavenger has only a rusty pipe to defend themselves and traverses mostly by walking and jumping around. As the game progresses, the character will eventually gain access to a greater range of weaponry and movement, being able to double jump and dash across the wasteland as well as shoot a gun.
 
@@ -78,6 +78,9 @@ A far cry from its pre-fallout appearance, the city is now mostly rubble and rui
 
 
 ## Game Experience
+
+![Spike trap.](./README%20images/Spikes(1).png)
+
 
 Pyrite Ruins is a 2D side-scrolling platformer and Metroidvania, broken up into two distinct levels, with character progression based primarily in the acquisition of various power-ups and abilities to clear and overcome obstacles.
 
