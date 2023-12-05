@@ -43,7 +43,7 @@ public class Interactable : MonoBehaviour
         if (active && collision.CompareTag("Player"))
         {
             inRange = true;
-            spriteShow.sprite = interactSprite;
+            if (interactSprite != null) spriteShow.sprite = interactSprite;
             if (interactText != null) interactText.SetActive(true);
         }
     }
@@ -53,7 +53,7 @@ public class Interactable : MonoBehaviour
         if (active && collision.CompareTag("Player"))
         {
             inRange = false;
-            spriteShow.sprite = baseSprite;
+            if (baseSprite != null) spriteShow.sprite = baseSprite;
             if (interactText != null) interactText.SetActive(false);
         }
     }
