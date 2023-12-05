@@ -8,12 +8,13 @@ public class Interactable : MonoBehaviour
 {
     public float interactRadius;
     public GameObject interactText;
-    private SpriteRenderer spriteShow;
-    private Sprite baseSprite;
+    public SpriteRenderer spriteShow;
+    public Sprite baseSprite;
     public Sprite interactSprite;
     //public String interactKey = "E";
     private CircleCollider2D circleCollider;
     public PlayerController player;
+    public LevelManager levelManager;
     public bool inRange;
     public bool active;
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class Interactable : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
         spriteShow = GetComponent<SpriteRenderer>();
         baseSprite = spriteShow.sprite;
+        levelManager = FindObjectOfType<LevelManager>();
         try
         {
             circleCollider = GetComponent<CircleCollider2D>();

@@ -8,16 +8,10 @@ public class Purchaseable : Interactable
 {
     public GameObject HUDIcon;
     public Sprite spriteIfSwitching;
-    public LevelManager levelManager;
     public enum UpgradeType { Dash, Sword, Health }
     public int price;
-    public GameObject priceText;
+    public GameObject signIcon;
     public UpgradeType upgrade;
-    // Start is called before the first frame update
-     void Start()
-    {
-        levelManager = FindObjectOfType<LevelManager>();
-    }
     // Update is called once per frame
     void Update()
     {
@@ -47,5 +41,9 @@ public class Purchaseable : Interactable
                 player.GiveHealthUpgrade();
                 break;
         }
+        active = false;
+        interactText.SetActive(false);
+        spriteShow.sprite = baseSprite;
+        signIcon.SetActive(false);
     }
 }

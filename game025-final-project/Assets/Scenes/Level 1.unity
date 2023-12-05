@@ -119835,8 +119835,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactRadius: 0
   interactText: {fileID: 159198114}
+  spriteShow: {fileID: 0}
+  baseSprite: {fileID: 0}
   interactSprite: {fileID: 21300000, guid: 967c33af2ce951c4684be73d45dc0efa, type: 3}
   player: {fileID: 1150708007}
+  levelManager: {fileID: 0}
   inRange: 0
   active: 1
   bootIcon: {fileID: 1624350961}
@@ -123284,7 +123287,6 @@ GameObject:
   - component: {fileID: 2081731566}
   - component: {fileID: 2081731564}
   - component: {fileID: 2081731565}
-  - component: {fileID: 2081731567}
   m_Layer: 0
   m_Name: Dash Sign
   m_TagString: Untagged
@@ -123323,15 +123325,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactRadius: 0
   interactText: {fileID: 1316610705}
+  spriteShow: {fileID: 0}
+  baseSprite: {fileID: 0}
   interactSprite: {fileID: -267401215, guid: 04149f694c2e98d4c932f6b7572d2cd9, type: 3}
   player: {fileID: 0}
+  levelManager: {fileID: 0}
   inRange: 0
   active: 1
   HUDIcon: {fileID: 1546663172}
   spriteIfSwitching: {fileID: 0}
-  levelManager: {fileID: 0}
   price: 5
-  priceText: {fileID: 957227834}
+  signIcon: {fileID: 2053212329}
   upgrade: 0
 --- !u!58 &2081731565
 CircleCollider2D:
@@ -123420,24 +123424,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2081731567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081731561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc8357f713148f429b807be93c61656, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactRadius: 0
-  interactText: {fileID: 1316610705}
-  interactSprite: {fileID: -267401215, guid: 04149f694c2e98d4c932f6b7572d2cd9, type: 3}
-  player: {fileID: 0}
-  inRange: 0
-  active: 1
 --- !u!1001 &2085872480
 PrefabInstance:
   m_ObjectHideFlags: 0
