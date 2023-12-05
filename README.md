@@ -88,7 +88,7 @@ Pyrite Ruins is a 2D side-scrolling platformer and Metroidvania, broken up into 
 The player must navigate through the vast and wild expanses of the Wasteland, initially strapped with only a rusty pipe.
 - Traverse harsh terrain, including rusted pipes, pools of acidic/radioactive goop, and high cliffs.  
 
-- Fight off wild and ravenous mutant hounds.
+- Fight off or avoid radioactive slime monsters.
   
 - Collect coins to exchange at the wayward shop for better weapons and boosts at the start of level 2.
 
@@ -103,7 +103,7 @@ The player character has now reached the remnants of the destroyed city, and mus
 
 - Cityscape is less open, requiring expert maneuvering to make it across obstacles and enemies. 
 
-- Lesser enemies become more frequent until the player reaches the boss.
+- Player must fight off rabid mutant hounds as they near the center of the city.
 
 ## Game Mechanics
 
