@@ -111,6 +111,8 @@ Pyrite Ruins is played in a third-person scrolling view centered on the 2D playe
 
 ### Movement Mechanics
 
+![The scavenger dashingl.](./README%20images/CharacterDash-Sheet(1).png)
+
 #### Double Jump
 
 After acquiring the double jump power-up, player characters will be able to jump once more in the air after their regular jump.
@@ -137,9 +139,13 @@ To acquire weapons upgrades as well as various boosts to health, the character m
 
 ### Health Mechanics
 
+![The scavenger standing still.](./README%20images/Bonfire-Sheet(1).png)
+
 The player character’s health, located in the corner of the screen and indicated by a number of energy bars, lowers when damaged by enemies and obstacles and does not replenish on its own. Should the player character run out of health, the player character dies and the game is restarted from the start of the level. Health can be replenished at the occasional barrelfire.
 
 ## Enemies
+
+![Slime creature.](./README%20images/SlimyBoi(1).png)
 
 The wasteland is a generally empty and desolate place, not fit for most lifeforms. However, as a result of mutations spurred on by the leaks of radioactive waste, living radioactive slime have come to inhabit the abandoned wastes. While generally not hostile and slow in their movements, these creatures can harm a player if they get too close. 
 
