@@ -34,7 +34,7 @@ public class EnemyAI : MonoBehaviour
 
         if (chasePlayer) facingRight = PlayerToRight();
 
-        if (PlayerToRight()) Debug.Log("Player to right"); else Debug.Log("Player to left");
+        //if (PlayerToRight()) Debug.Log("Player to right"); else Debug.Log("Player to left");
 
         myRigidbody.velocity = new Vector2(moveSpeed * ModifierOf(facingRight), myRigidbody.velocity.y);
         if (Physics2D.OverlapCircle(wallCheck.position, wallCheckSensitivity, whatIsGround) && aIType == AI_Type.RandomMovement) ChangeDirection();
