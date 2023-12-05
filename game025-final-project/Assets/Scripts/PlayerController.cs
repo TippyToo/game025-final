@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
 
     // Utility variables
     private Rigidbody2D myRigidbody;
-    private bool controlLock = false;
+    public bool controlLock = false;
     private enum direction { Left, Right } 
     private direction facing;
     private static float YLIMIT = -100;
@@ -305,6 +305,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("PlayerCanDamage"))
         {
             collision.GetComponent<PlayerDamageable>().Damage(attackDamage);
+            Debug.Log("damaged enemy");
         }
     }
 }
