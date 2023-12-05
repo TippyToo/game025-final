@@ -254,6 +254,7 @@ public class PlayerController : MonoBehaviour
     public void Kill()
     {
         isAlive = false;
+        //myRigidbody.constraints = RigidbodyConstraints2D.FreezePositionX;
         LockControls();
         myAnim.SetTrigger("Die");
         Rigidbody2D newHead = Instantiate(head, headLocation.position, Quaternion.identity).GetComponent<Rigidbody2D>();
@@ -265,7 +266,7 @@ public class PlayerController : MonoBehaviour
         EnemyAI[] enemies = GameObject.FindObjectsOfType<EnemyAI>();
         foreach (EnemyAI enemy in enemies)
         {
-            enemy.aIType = EnemyAI.AI_Type.RandomMovement;
+            enemy.chasePlayer = false;
         }
 
         StartCoroutine(RespawnAfterSeconds(respawnDelay));

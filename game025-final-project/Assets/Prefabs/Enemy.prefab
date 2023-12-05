@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 794249358447874120}
   - component: {fileID: 4037003104697517345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 2570151394616837911}
   - component: {fileID: 3097429246345365841}
   - component: {fileID: 7105100162126935432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: PlayerCanDamage
   m_Icon: {fileID: 2800000, guid: 37a8aa31d08cbb34dae9bb551133c47a, type: 3}
@@ -174,7 +174,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
