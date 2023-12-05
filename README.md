@@ -143,7 +143,8 @@ The player character’s health, located in the corner of the screen and indicat
 
 The wasteland is a generally empty and desolate place, not fit for most lifeforms. However, as a result of mutations spurred on by the leaks of radioactive waste, living radioactive slime have come to inhabit the abandoned wastes. While generally not hostile and slow in their movements, these creatures can harm a player if they get too close. 
 
-![Mutant hound standing still.](./README%20images/Enemy_Still.png)
+![Mutant hound standing still.](./README%20images/Enemy_Still.png) 
+![Large mutant pack leader standing still.](./README%20images/Boss.png)
 
 The city have become overrun by mutated hounds, rabid and dangerous creatures that chase after anything that moves. After years of radiation exposure, their fur has mutated into sharp quills, which they use to hunt other animals and the occassional human. They are fiercely territorial, chasing after anything that steps into their space. A particularly large pack of these hounds have taken over the nearby city. As the player progresses to level 2, the amount of enemies they will face will increase as they delve deeper into the hounds' territory. 
 At the end of the level 2, the player will face off against the pack leader, a large mutated hound with multiple heads and a towering height. The leader is heartier and fiercer, posing a serious threat to the player as they near the end of their quest.
