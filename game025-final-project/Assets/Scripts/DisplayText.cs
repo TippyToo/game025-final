@@ -41,6 +41,7 @@ public class DisplayText : MonoBehaviour
 
     public void ClearText()
     {
+        textElement = GetComponent<Text>();
         textElement.text = "";
         position = textToDisplay.Length;
     }

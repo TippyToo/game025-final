@@ -1,4 +1,4 @@
-![Placeholder image](./README%20images/Spikes.png)
+![Background image of the wasteland with some ruined buildings.](./README%20images/MainMenuBackground.png)
 # Pyrite Ruins
 
 https://github.com/TippyToo/game025-final
@@ -7,7 +7,7 @@ https://github.com/TippyToo/game025-final
 
 For PC
 
-**Rating:**
+**Rating: E**
 
 **Release Date: TBD**
 
@@ -46,6 +46,8 @@ In Pyrite Ruins, the scavenger traverses perilous post-nuclear fallout in the ho
 
 ## Player Character
 
+![The scavenger standing still.](./README%20images/Character(1).png)
+
 The scavenger is a regular human, a survivor of the nuclear fallout that decimated the world years before. They wear a gas mask and a long hooded cloak, protecting themselves from the harsh and toxic wasteland air, as they traverse the land. They have come to the city in search of a truck, rumored to still exist in the heart of the city and the only way to traverse the desert safely. At the start of the game, the scavenger has only a rusty pipe to defend themselves and traverses mostly by walking and jumping around. As the game progresses, the character will eventually gain access to a greater range of weaponry and movement, being able to double jump and dash across the wasteland as well as shoot a gun.
 
 ## Controls
@@ -66,12 +68,19 @@ The scavenger is a regular human, a survivor of the nuclear fallout that decimat
 
 The overworld is split into two primary locations: the arid wasteland in level one and the desolate ruins of the city in level two. Taking inspiration from the Fallout series and other sci-fi and post-apocalyptic media, the world feels rather empty and unpredictable, dangers lurking at every corner.
 
+![Background image of the desert wasteland.](./README%20images/DesertBackgroundMAINSection.png)
+
 Littered with tall cliffs, rusted spike traps, and wild mutant creatures, the wasteland holds true to its name. The remains of the city reach all the way out in the wastes too, evidenced by the rusted pipes that populate the area, which drip the radioactive goop that fill bright green pools. The wasteland is pretty sparsely populated by humans, who have largely disappeared from the Earth minus the small groups of survivors and scavengers that traverse the land. Some of these survivors have taken to collecting and trading their wares wherever they go, and one could expect to find the occassional shop near abandoned cities and ruins.
+
+![Background image of the ruined city.](./README%20images/CityBackgroundMAINSection.png)
 
 A far cry from its pre-fallout appearance, the city is now mostly rubble and ruins of destroyed buildings and cracked streets. Nowadays, as a result of a scattered human population, the city has become infested with mutant creatures, migrating in from the harsh wasteland. The dark and winding paths through the city have become hotbeds for mutant attacks, leading travelers to avoid the city as much as they can. Nonetheless, the surplus of resources left behind in abandoned supermarkets and apartment homes also make the city a treasure trove, if only one is brave enough to face the life-threatening dangers that lurk within.
 
 
 ## Game Experience
+
+![Spike trap.](./README%20images/Spikes(1).png)
+
 
 Pyrite Ruins is a 2D side-scrolling platformer and Metroidvania, broken up into two distinct levels, with character progression based primarily in the acquisition of various power-ups and abilities to clear and overcome obstacles.
 
@@ -133,6 +142,8 @@ The player character’s health, located in the corner of the screen and indicat
 ## Enemies
 
 The wasteland is a generally empty and desolate place, not fit for most lifeforms. However, as a result of mutations spurred on by the leaks of radioactive waste, living radioactive slime have come to inhabit the abandoned wastes. While generally not hostile and slow in their movements, these creatures can harm a player if they get too close. 
+
+![Mutant hound standing still.](./README%20images/Enemy_Still.png)
 
 The city have become overrun by mutated hounds, rabid and dangerous creatures that chase after anything that moves. After years of radiation exposure, their fur has mutated into sharp quills, which they use to hunt other animals and the occassional human. They are fiercely territorial, chasing after anything that steps into their space. A particularly large pack of these hounds have taken over the nearby city. As the player progresses to level 2, the amount of enemies they will face will increase as they delve deeper into the hounds' territory. 
 At the end of the level 2, the player will face off against the pack leader, a large mutated hound with multiple heads and a towering height. The leader is heartier and fiercer, posing a serious threat to the player as they near the end of their quest.
