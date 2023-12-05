@@ -35,6 +35,13 @@ public class DisplayText : MonoBehaviour
 
     public void startCreditsRoll()
     {
+        ClearText();
         position = 0;
+    }
+
+    public void ClearText()
+    {
+        textElement.text = "";
+        position = textToDisplay.Length;
     }
 }
