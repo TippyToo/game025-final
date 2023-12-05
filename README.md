@@ -99,7 +99,7 @@ The player must navigate through the vast and wild expanses of the Wasteland, in
 ### Level 2
 The player character has now reached the remnants of the destroyed city, and must face the growing threat waiting at its center.
 
-- Final boss is located at the end of the level and must be defeated to beat the game. Boss has multiple attacks, forcing player to quickly switch between weapons and use various abilities to take it down.  
+- (Unimplemented) Final boss is located at the end of the level and must be defeated to beat the game. Boss has multiple attacks, forcing player to quickly switch between weapons and use various abilities to take it down.  
 
 - Cityscape is less open, requiring expert maneuvering to make it across obstacles and enemies. 
 
@@ -127,7 +127,7 @@ Beyond these basic and advanced movements, players will also use various weapons
 
 The player begins with a rusted metal pipe. With a short attack range and slower attack speed (compared to the ranged weapon), the melee weapon makes up for its weaknesses with a decisively higher attack power. Best used in short-range and against enemies too strong/fast to take out with just the ranged attack. Better melee weapons become available as the player progresses.
 
-#### Ranged
+#### Ranged (Unimplemented)
 
 The player acquires a pistol early on in level one, unlocking the ranged attack. As their name suggests, ranged weapons have increased range, allowing the player to attack from a considerable distance away. However, as a trade-off, early ranged weapons are weaker in comparison to melee weapon attacks. It is best used against armored enemies, allowing the player to damage enemies that are otherwise impervious to short-range melee attacks. Better ranged weapons become available as the player progresses.
 
@@ -137,7 +137,7 @@ To acquire weapons upgrades as well as various boosts to health, the character m
 
 ### Health Mechanics
 
-The player character’s health, located in the corner of the screen and indicated by a number of hearts, lowers when damaged by enemies and obstacles and does not replenish on its own. Should the player character run out of health, the player character dies and the game is restarted from the start of the level. Health can be replenished at the occasional barrelfire.
+The player character’s health, located in the corner of the screen and indicated by a number of energy bars, lowers when damaged by enemies and obstacles and does not replenish on its own. Should the player character run out of health, the player character dies and the game is restarted from the start of the level. Health can be replenished at the occasional barrelfire.
 
 ## Enemies
 
