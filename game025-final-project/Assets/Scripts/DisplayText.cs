@@ -2,19 +2,30 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DisplayText : MonoBehaviour
 {
     public String textToDisplay = "## High Priority (Must do)\r\n- Pause Menu\r\n- Truck\r\n- Shop\r\n- Getting Hit\r\n\t- Animation\r\n\t- Knockback\r\n- Credits\r\n- Fix Tilemap\r\n\t- Move desert objects to separate tilemap\r\n\t- Replace desert enemies\r\n- Music\r\n- Desert -> City Transition\r\n- Health HUD\r\n## Medium Priority (Should do)\r\n- Settings\r\n- Bonfire (Healing)\r\n- Sound Effects\r\n\r\n## Low Priority (Would be nice to do)\r\n- Dead bushes in desert\r\n- Tumbleweed";
+    private Text textElement;
+    private int position;
+    public float displaySpeed;
+    private float advanceCooldown;
     // Start is called before the first frame update
     void Start()
     {
-        
+        position = 0;
+        textElement = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (advanceCooldown > 0) { advanceCooldown -= Time.deltaTime; }
+        else
+        {
+            textElement.text += textToDisplay[position++];
+            advanceCooldown = displaySpeed;
+        }
     }
 }
