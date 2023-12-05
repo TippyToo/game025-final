@@ -6,6 +6,8 @@ public class ChangeLevel : MonoBehaviour
 {
     private PlayerController player;
     private Fadein fader;
+    public AudioSource music;
+    public AudioClip stage2Music;
     public float timeBetweenStages;
     public Transform citySpawn;
     // Start is called before the first frame update
@@ -41,6 +43,8 @@ public class ChangeLevel : MonoBehaviour
         yield return new WaitForSeconds(0.517f);
         StartCoroutine(WaitNextStage());
         player.transform.position = citySpawn.position;
+        music.Stop();
+        music.clip = stage2Music;
         yield return 0;
     }
 
@@ -48,6 +52,8 @@ public class ChangeLevel : MonoBehaviour
     {
         yield return new WaitForSeconds(timeBetweenStages);
         fader.FadeToEmpty();
+        music.Play();
+        player.currentHealth = player.maxHealth;
         StartCoroutine(EnterNextStage());
         yield return 0;
     }
