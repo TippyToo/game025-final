@@ -313,6 +313,8 @@ public class PlayerController : MonoBehaviour
 
     public void GiveSwordUpgrade()
     {
+        attackDamage++;
+        attackCooldown -= 0.1f;
 
     }
 
