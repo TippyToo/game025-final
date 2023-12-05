@@ -9,14 +9,23 @@ public class StartMenu : MonoBehaviour
 {
     public float timeToLoadingScreen;
     public float timeInLoadingScreen;
+    public Animator fadeoutAnim;
+    public GameObject fadeoutScreen;
     public GameObject loadingScreen;
     public GameObject settingsScreen;
+    public GameObject creditsScreen;
+    public float timeBeforeCredits;
+    private DisplayText textScript;
     public int levelToLoad;
     // Start is called before the first frame update
     void Start()
     {
         loadingScreen.SetActive(false);
         settingsScreen.SetActive(false);
+        creditsScreen.SetActive(false);
+        fadeoutScreen.SetActive(false);
+        textScript = creditsScreen.transform.Find("Text").GetComponent<DisplayText>();
+
     }
 
     // Update is called once per frame
@@ -31,17 +40,24 @@ public class StartMenu : MonoBehaviour
 
     public void StartGame()
     {
+        fadeoutScreen.SetActive(true);
+        fadeoutAnim.SetTrigger("Begin");
         StartCoroutine(ToLoadingScreen());
     }
 
     public void ToggleSettings()
     {
         settingsScreen.SetActive(!settingsScreen.activeSelf);
+        creditsScreen.SetActive(false);
+        
     }
 
     public void RollCredits()
     {
+        creditsScreen.SetActive(!creditsScreen.activeSelf);
         settingsScreen.SetActive(false);
+        textScript.ClearText();
+        StartCoroutine(StartCredits());
     }
 
     public void Quit()
@@ -60,6 +76,13 @@ public class StartMenu : MonoBehaviour
     {
         yield return new WaitForSeconds(timeInLoadingScreen);
         SceneManager.LoadScene(levelToLoad);
+        yield return 0;
+    }
+
+    IEnumerator StartCredits()
+    {
+        yield return new WaitForSeconds(timeBeforeCredits);
+        textScript.startCreditsRoll();
         yield return 0;
     }
 }
