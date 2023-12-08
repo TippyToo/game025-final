@@ -314,6 +314,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
+  doKnockback: 1
+  knockbackTime: 0
+  knockbackTimeLeft: 0
+  knockbackSpeed: 0
 --- !u!114 &7105100162126935432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,3 +333,6 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   healthBar: {fileID: 1251207742740231557, guid: 944c8ef663634c5438184658b17f96ee, type: 3}
+  attackHit: {fileID: 8300000, guid: 96c6f8e901d88f045a3c36caca33653d, type: 3}
+  attackHitVolume: 0.4
+  levelManager: {fileID: 0}

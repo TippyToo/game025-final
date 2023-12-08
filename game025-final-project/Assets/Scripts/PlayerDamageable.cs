@@ -7,9 +7,11 @@ public class PlayerDamageable : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
-    //public Text healthDisplay;
     public GameObject healthBar;
     private HealthBar hp;
+    public AudioClip attackHit;
+    public float attackHitVolume;
+    public LevelManager levelManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +21,12 @@ public class PlayerDamageable : MonoBehaviour
         hp = healthBar.GetComponent<HealthBar>();
         hp.maxHealth = maxHealth;
         hp.currentHealth = currentHealth;
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //healthDisplay.text = currentHealth.ToString();
         hp.currentHealth = currentHealth;
         if (currentHealth <= 0) Kill();
         
@@ -32,6 +34,7 @@ public class PlayerDamageable : MonoBehaviour
 
     public void Damage(int damage)
     {
+        levelManager.GetComponent<AudioSource>().PlayOneShot(attackHit, attackHitVolume);
         currentHealth -= damage;
         if (currentHealth < 0) currentHealth = 0;
     }

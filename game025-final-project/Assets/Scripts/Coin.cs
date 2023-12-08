@@ -11,6 +11,9 @@ public class Coin : MonoBehaviour
     private Vector3 initPosition;
     private LevelManager levelManager;
     private Animator myAnim;
+
+    public AudioClip coinSound;
+    public float pickupVolume;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,7 @@ public class Coin : MonoBehaviour
         if (transform.position.y < initPosition.y)
         {
             levelManager.addCoins(value);
+            levelManager.GetComponent<AudioSource>().PlayOneShot(coinSound, pickupVolume);
             Destroy(gameObject);
         }
     }

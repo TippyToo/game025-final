@@ -86,6 +86,13 @@ public class PlayerController : MonoBehaviour
     public CapsuleCollider2D mainCollider;
     public CapsuleCollider2D deadCollider;
     private FlashSprite spriteFlasher;
+    private LevelManager levelManager;
+
+    // Sound variables
+    public AudioSource footstepSource;
+    public AudioSource gameSource;
+    public AudioClip attackWhif;
+    public AudioClip bootsActivate;
 
     void Start()
     {
@@ -99,6 +106,9 @@ public class PlayerController : MonoBehaviour
         attackRange.enabled = false;
         myRigidbody = GetComponent<Rigidbody2D>();
         spriteFlasher = GetComponent<FlashSprite>();
+        levelManager = FindObjectOfType<LevelManager>();
+        footstepSource = GetComponent<AudioSource>();
+        gameSource = levelManager.GetComponent<AudioSource>();
         //initJumpRefreshCooldown = jumpRefreshCooldown;
         initDashCooldown = dashCooldown;
         dashCooldown = 0f;
@@ -147,6 +157,7 @@ public class PlayerController : MonoBehaviour
                 {
                     myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpStrength);
                     myAnim.SetTrigger("DoubleJump");
+                    gameSource.PlayOneShot(bootsActivate);
                     hasDoubleJump = false;
                 }
             }
@@ -187,12 +198,10 @@ public class PlayerController : MonoBehaviour
         if (dashCooldown > 0f)
         {
             dashCooldown -= Time.deltaTime;
-            //dashText.text = "Dash: " + MathF.Round(dashCooldown, 1) + "s";
         }
         else
         {
             dashCooldown = 0f;
-            //dashText.text = "Dash: Ready!";
         }
 
         
@@ -201,16 +210,6 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             hasDoubleJump = true;
-            //if (jumpRefreshCooldown <= 0f)
-            //{
-            //    jumpsLeft = totalJumps;
-            //    jumpRefreshCooldown = initJumpRefreshCooldown;
-            //}
-            //else
-            //{
-            //    jumpRefreshCooldown -= Time.deltaTime;
-            //    if (jumpRefreshCooldown < 0f) jumpRefreshCooldown = 0f;
-            //}
         }
 
         // Attack handler
@@ -220,6 +219,7 @@ public class PlayerController : MonoBehaviour
             attackRange.enabled = true;
             attackCooldownLeft = attackCooldown;
             attackTimeLeft = attackDuration;
+            gameSource.PlayOneShot(attackWhif);
 
         }
         if (attackTimeLeft > 0f)
@@ -251,9 +251,18 @@ public class PlayerController : MonoBehaviour
         // Health handler
         if (currentHealth <= 0 && isAlive) Kill();
         if (currentHealth > maxHealth) currentHealth = maxHealth;
-        //healthDisplay.text = "Health: " + currentHealth;
         hp.currentHealth = currentHealth;
         hp.maxHealth = maxHealth;
+
+        // Footstep handler
+        if (Math.Abs(myRigidbody.velocity.x) > 0.1 && isGrounded && !footstepSource.isPlaying)
+        {
+            footstepSource.Play();
+        }
+        if (Math.Abs(myRigidbody.velocity.x) <= 0.1 || !isGrounded)
+        {
+            footstepSource.Stop();
+        }
 
     }
 
@@ -330,4 +339,6 @@ public class PlayerController : MonoBehaviour
     {
 
     }
+
+    public void ReplenishDoubleJump() { hasDoubleJump = true; }
 }

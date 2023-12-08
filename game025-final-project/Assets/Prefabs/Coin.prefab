@@ -123,6 +123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 1
   jumpAmount: 6
+  coinSound: {fileID: 8300000, guid: d1505966ea1751345a8f24b2e700c636, type: 3}
+  pickupVolume: 0.15
 --- !u!50 &426663200569962330
 Rigidbody2D:
   serializedVersion: 4

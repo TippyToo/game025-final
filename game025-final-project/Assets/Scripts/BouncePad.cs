@@ -13,6 +13,7 @@ public class BouncePad : MonoBehaviour
         {
             Rigidbody2D player = collision.GetComponent<Rigidbody2D>();
             player.velocity = new Vector2(player.velocity.x, bounceStrength);
+            player.GetComponent<PlayerController>().ReplenishDoubleJump();
         }
     }
 }

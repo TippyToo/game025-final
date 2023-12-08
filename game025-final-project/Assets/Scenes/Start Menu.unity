@@ -1102,7 +1102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1153981831
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1355,23 +1355,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6970159606492586180, guid: 894e6d053bfebe14888d7c74cf000003, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6970159606492586180, guid: 894e6d053bfebe14888d7c74cf000003, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6970159606492586180, guid: 894e6d053bfebe14888d7c74cf000003, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7461460508974486821, guid: 894e6d053bfebe14888d7c74cf000003, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7461460508974486821, guid: 894e6d053bfebe14888d7c74cf000003, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8892858869569485176, guid: 894e6d053bfebe14888d7c74cf000003, type: 3}
       propertyPath: m_Sprite
@@ -2716,12 +2716,24 @@ PrefabInstance:
       value: Difficulty Slider
       objectReference: {fileID: 0}
     - target: {fileID: 6970159606492586180, guid: 894e6d053bfebe14888d7c74cf000003, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970159606492586180, guid: 894e6d053bfebe14888d7c74cf000003, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970159606492586180, guid: 894e6d053bfebe14888d7c74cf000003, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461460508974486821, guid: 894e6d053bfebe14888d7c74cf000003, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7461460508974486821, guid: 894e6d053bfebe14888d7c74cf000003, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8892858869569485176, guid: 894e6d053bfebe14888d7c74cf000003, type: 3}
       propertyPath: m_Sprite

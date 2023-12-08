@@ -231,6 +231,9 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 3
   healthBar: {fileID: 1251207742740231557, guid: 944c8ef663634c5438184658b17f96ee, type: 3}
+  attackHit: {fileID: 8300000, guid: 96c6f8e901d88f045a3c36caca33653d, type: 3}
+  attackHitVolume: 0.4
+  levelManager: {fileID: 0}
 --- !u!58 &2505036937108263883
 CircleCollider2D:
   m_ObjectHideFlags: 0
