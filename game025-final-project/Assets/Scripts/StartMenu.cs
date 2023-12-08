@@ -29,6 +29,8 @@ public class StartMenu : MonoBehaviour
         textScript = creditsScreen.transform.Find("Text").GetComponent<DisplayText>();
         volumeSetting = settingsScreen.transform.Find("Volume").Find("Volume Slider").GetComponent<Slider>();
         difficultySetting = settingsScreen.transform.Find("Difficulty").Find("Difficulty Slider").GetComponent<Slider>();
+        PlayerPrefs.SetFloat("Volume", 1f);
+        PlayerPrefs.SetInt("Difficulty", 1);
 
     }
 
