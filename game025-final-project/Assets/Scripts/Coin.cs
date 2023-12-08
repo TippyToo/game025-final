@@ -10,12 +10,14 @@ public class Coin : MonoBehaviour
     private bool collected;
     private Vector3 initPosition;
     private LevelManager levelManager;
+    private Animator myAnim;
     // Start is called before the first frame update
     void Start()
     {
         initPosition = transform.position;
         myRigidbody = GetComponent<Rigidbody2D>();
         levelManager = GameObject.FindObjectOfType<LevelManager>();
+        myAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class Coin : MonoBehaviour
             collected = true;
             myRigidbody.isKinematic = false;
             myRigidbody.velocity = new Vector2(0, jumpAmount);
+            myAnim.SetTrigger("Pickup");
         }
     }
 }

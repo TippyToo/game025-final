@@ -10,9 +10,10 @@ public class PlayerController : MonoBehaviour
     // Movement variables
     [Tooltip("How fast the character moves")]
     public float moveSpeed;
-    [Tooltip("How high the character jumps")]
+    public float easymodeMoveSpeedBonus = 0.5f;
 
     // Jump variables
+    [Tooltip("How high the character jumps")]
     public float jumpStrength;
     [Tooltip("The transform used to denote the positioning of the ground check")]
     public Transform groundCheck;
@@ -83,7 +84,8 @@ public class PlayerController : MonoBehaviour
     private direction facing;
     private static float YLIMIT = -100;
     public CapsuleCollider2D mainCollider;
-    public CapsuleCollider2D deadCollider; 
+    public CapsuleCollider2D deadCollider;
+    private FlashSprite spriteFlasher;
 
     void Start()
     {
@@ -96,12 +98,14 @@ public class PlayerController : MonoBehaviour
         attackCooldownLeft = attackCooldown;
         attackRange.enabled = false;
         myRigidbody = GetComponent<Rigidbody2D>();
+        spriteFlasher = GetComponent<FlashSprite>();
         //initJumpRefreshCooldown = jumpRefreshCooldown;
         initDashCooldown = dashCooldown;
         dashCooldown = 0f;
         myAnim = GetComponent<Animator>();
         if (moveSpeed <= 0) { Debug.LogWarning("character moveSpeed is set to 0 or less"); }
         if (jumpStrength <= 0) { Debug.LogWarning("character jumpStrength is set to 0 or less"); }
+        if (PlayerPrefs.GetInt("Difficulty") == 0) moveSpeed += easymodeMoveSpeedBonus;
 
     }
 
@@ -292,8 +296,12 @@ public class PlayerController : MonoBehaviour
 
     public void Damage(int damage)
     {
-        currentHealth -= damage;
-        if (currentHealth < 0) currentHealth = 0;
+        if (!spriteFlasher.shouldFlash)
+        {
+            currentHealth -= damage;
+            if (currentHealth < 0) currentHealth = 0;
+            spriteFlasher.StartFlash();
+        }
     }
 
     public void ToggleLockControls() { controlLock = !controlLock; }

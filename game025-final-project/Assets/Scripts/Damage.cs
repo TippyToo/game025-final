@@ -13,11 +13,13 @@ public class Damage : MonoBehaviour
     public float knockbackTime;
     public float knockbackTimeLeft;
     public float knockbackSpeed;
+    private FlashSprite spriteFlasher;
 
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
         playerBody = player.GetComponent<Rigidbody2D>();
+        spriteFlasher = player.GetComponent<FlashSprite>();
     }
 
     void Update()
@@ -46,7 +48,7 @@ public class Damage : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.transform.CompareTag("Player") && player.isAlive && !player.controlLock)
+        if (other.transform.CompareTag("Player") && player.isAlive && !player.controlLock && !spriteFlasher.shouldFlash)
         {
             player.Damage(damageAmount);
             if (doKnockback && player.currentHealth > damageAmount) knockbackTimeLeft = knockbackTime;

@@ -6,7 +6,8 @@ public class PitHazard : MonoBehaviour
 {
     private Transform respawnAt;
     [Tooltip("Amount to damage player when falling in")]
-    public int damageAmount;
+    public int damageAmount = 1;
+    public int hardmodeDamageModifier = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,8 @@ public class PitHazard : MonoBehaviour
                 collision.transform.position = respawnAt.position;
                 collision.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             }
-            player.Damage(damageAmount);
+            if (PlayerPrefs.GetInt("Difficulty") == 1) { player.Damage(damageAmount + hardmodeDamageModifier); }
+            else { player.Damage(damageAmount); }
         }
     }
 }

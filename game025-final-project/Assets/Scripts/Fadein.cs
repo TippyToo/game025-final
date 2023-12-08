@@ -13,6 +13,11 @@ public class Fadein : MonoBehaviour
         StartCoroutine(WaitThenFadeIn());
     }
 
+    private void Update()
+    {
+        if (fadeAnim != null) { fadeAnim = GetComponent<Animator>(); }
+    }
+
     public void FadeToBlack()
     {
         fadeAnim.SetTrigger("FadeToBlack");
